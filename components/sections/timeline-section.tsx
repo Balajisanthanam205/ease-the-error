@@ -120,34 +120,64 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
 
         <div className="relative">
           {/* Timeline progress bar */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-800"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-800 hidden md:block"></div>
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white transition-all duration-500 ease-out"
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white transition-all duration-500 ease-out hidden md:block"
             style={{ height: `${timelineProgress * 100}%` }}
           ></div>
 
-          {/* Timeline events in linear layout */}
-          <div className="">
+          {/* Mobile timeline progress bar */}
+          <div className="absolute left-6 top-0 h-full w-1 bg-gray-800 md:hidden"></div>
+          <div
+            className="absolute left-6 top-0 w-1 bg-white transition-all duration-500 ease-out md:hidden"
+            style={{ height: `${timelineProgress * 100}%` }}
+          ></div>
+
+          {/* Timeline events */}
+          <div className="space-y-16 md:space-y-24">
             {timelineEvents.map((event, index) => (
-              <div key={index} className="timeline-pair mb-16">
-                <div className="grid grid-cols-1 gap-10">
-                  <div
-                    className={`timeline-event relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-10 md:items-center ${index === activeTimelineEvent ? "visible" : ""}`}
-                    data-parallax="0.1"
-                  >
-                    <div className="md:text-right md:pr-10">
-                      <div className="absolute left-0 md:left-auto md:right-0 top-0 md:top-1/2 md:transform md:-translate-y-1/2 md:translate-x-1/2 z-10">
-                        <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-black font-bold">
-                          {index + 1}
-                        </div>
-                      </div>
-                      <h3 className="text-3xl font-bold mb-4">{event.title}</h3>
-                      <p className="text-gray-400 text-lg">{event.description}</p>
+              <div
+                key={index}
+                className="timeline-event relative opacity-0 transition-opacity duration-500 ease-in-out"
+                style={{ transitionDelay: `${index * 0.2}s` }}
+              >
+                {/* Mobile layout (stacked) */}
+                <div className="flex md:hidden items-start mb-4">
+                  <div className="relative">
+                    <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-black font-bold z-10 relative">
+                      {index + 1}
                     </div>
-                    <div className="mt-8 md:mt-0 md:pl-10">
-                      <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 transform transition-all duration-500 hover:scale-105">
-                        <p className="text-2xl font-mono">{event.date}</p>
-                        <p className="text-gray-400">{event.time}</p>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold">{event.title}</h3>
+                    <p className="text-gray-400 text-sm mt-1">
+                      {event.date} • {event.time}
+                    </p>
+                  </div>
+                </div>
+                <div className="pl-16 md:pl-0 md:w-full">
+                  <div className="bg-gray-900 p-4 md:p-6 rounded-lg border border-gray-800 md:hidden">
+                    <p className="text-gray-400">{event.description}</p>
+                  </div>
+                </div>
+
+                {/* Desktop layout (alternating) */}
+                <div className="hidden md:block">
+                  <div className={`flex items-center ${index % 2 === 0 ? "justify-end" : "justify-start"}`}>
+                    <div className={`w-5/12 ${index % 2 === 0 ? "text-right pr-16" : "pl-16"}`}>
+                      <h3 className="text-2xl font-bold mb-2">{event.title}</h3>
+                      <p className="text-gray-400 mb-2">{event.description}</p>
+                      <div className="inline-block bg-gray-900 px-4 py-2 rounded-lg border border-gray-800">
+                        <p className="text-lg font-mono">
+                          {event.date} • {event.time}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Center number indicator */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                      <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-black font-bold shadow-lg">
+                        {index + 1}
                       </div>
                     </div>
                   </div>
@@ -157,23 +187,27 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
           </div>
 
           {/* Timeline indicator dots */}
-          {/*<div className="timeline-indicator hidden md:flex">
-            {timelineEvents.map((_, index) => (
-              <div
-                key={index}
-                className={`timeline-indicator-dot ${activeTimelineEvent === index ? "active" : ""}`}
-                onClick={() => {
-                  const element = document.querySelectorAll(".timeline-pair")[index]
-                  if (element) {
-                    window.scrollTo({
-                      top: element.getBoundingClientRect().top + window.scrollY - 100,
-                      behavior: "smooth",
-                    })
-                  }
-                }}
-              ></div>
-            ))}
-          </div>*/}
+          <div className="hidden md:block">
+            <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-20">
+              {timelineEvents.map((_, index) => (
+                <div
+                  key={index}
+                  className={`h-3 w-3 rounded-full my-4 cursor-pointer transition-all duration-300 ${
+                    activeTimelineEvent === index ? "bg-white scale-150" : "bg-gray-600 hover:bg-gray-400"
+                  }`}
+                  onClick={() => {
+                    const element = document.querySelectorAll(".timeline-event")[index]
+                    if (element) {
+                      window.scrollTo({
+                        top: element.getBoundingClientRect().top + window.scrollY - 100,
+                        behavior: "smooth",
+                      })
+                    }
+                  }}
+                ></div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 text-center">
@@ -182,6 +216,15 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
           </Button>
         </div>
       </div>
+
+      <style jsx>{`
+        .timeline-event.visible {
+          opacity: 1;
+        }
+        [data-parallax] {
+          transform: translateY(var(--parallax-y, 0));
+        }
+      `}</style>
     </section>
   )
 })
