@@ -24,7 +24,7 @@ export const SponsorsSection = forwardRef<HTMLDivElement, SponsorsSectionProps>(
           </p>
         </div>
 
-        <div className="mb-16">
+        {/*<div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-center">Platinum Sponsors</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[1, 2].map((sponsor) => (
@@ -101,7 +101,29 @@ export const SponsorsSection = forwardRef<HTMLDivElement, SponsorsSectionProps>(
               </div>
             ))}
           </div>
-        </div>
+        </div>*/}
+
+        {/* Replaced Platinum, Gold, and Silver sponsors with a single "Coming Soon" image */}
+<div className="mb-16">
+  <h3 className="text-xl font-bold text-center mb-8 text-white">
+    {/*<span className="inline-block px-4 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-500/30">
+      Coming Soon
+    </span>*/}
+  </h3>
+  <div className="flex justify-center">
+    {/* Gradient Border Container */}
+    <div className="relative w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] h-auto">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg -z-10 "></div>
+      {/* Image */}
+      <img
+        src="/comming-soon.jpg"
+        alt="Coming Soon"
+        className="w-full h-auto object-cover transition-all duration-300 rounded-lg relative z-10 p-2"
+      />
+    </div>
+  </div>
+</div>
 
         <div className="mt-16 text-center">
           <Button
