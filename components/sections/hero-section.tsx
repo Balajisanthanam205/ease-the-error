@@ -21,12 +21,12 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
       <div className="relative z-10 container mx-auto px-4 text-center">
         <ParallaxBackground speed={0.2} className="py-8">
           <div className="space-y-6 max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter" data-parallax="0.1">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter" data-parallax="0.1" gap-4>
               EASE<br></br><span className="text-gray-500">THE</span><br></br>ERROR
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto" data-parallax="0.15">
-              Innovate. Build. Transform. Join the ultimate coding challenge.
+              design.develop.deply.
             </p>
 
             <div className="py-8" data-parallax="0.2">
