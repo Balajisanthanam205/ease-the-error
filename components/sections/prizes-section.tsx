@@ -39,7 +39,7 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
               <ul className="space-y-2 text-gray-400 mb-6 text-left">
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>$10,000 cash prize for the team</span>
+                  <span>10,000 cash prize for the team</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -71,7 +71,7 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
               <ul className="space-y-2 text-gray-400 mb-6 text-left">
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
-                  <span>$25,000 cash prize for the team</span>
+                  <span>25,000 cash prize for the team</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
