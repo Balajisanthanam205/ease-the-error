@@ -20,6 +20,7 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <ParallaxBackground speed={0.2} className="py-8">
+          <br></br>
           <div className="space-y-6 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter" data-parallax="0.1">
             EASE&nbsp;&nbsp;<span className="text-gray-500">THE</span>&nbsp;&nbsp;ERROR
