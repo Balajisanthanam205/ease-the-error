@@ -5,7 +5,7 @@ import { Countdown } from "@/components/countdown"
 import { ParticleBackground } from "@/components/particle-background"
 import { ParallaxBackground } from "@/components/parallax-background"
 import { ParallaxStars } from "@/components/parallax-stars"
-import { ChevronDown, Rocket } from "lucide-react"
+import { ChevronDown, Rocket, Download } from "lucide-react"
 
 interface HeroSectionProps {
   hackathonDate: Date
@@ -16,7 +16,7 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden parallax-container">
       <ParticleBackground />
-      <ParallaxStars count={150} />
+      <ParallaxStars count={300} />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <ParallaxBackground speed={0.2} className="py-8">
@@ -33,10 +33,12 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
               <Countdown targetDate={hackathonDate} />
             </div>
 
+            {/* First Row - Register & Learn More */}
             <div className="flex flex-wrap justify-center gap-4 mt-8" data-parallax="0.25">
               <Button size="lg" className="bg-white text-black hover:bg-gray-200">
                 Register Now <Rocket className="ml-2 h-4 w-4" />
               </Button>
+
               <Button
                 variant="outline"
                 size="lg"
@@ -45,6 +47,20 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
               >
                 Learn More <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
+            </div>
+
+            {/* Second Row - Download Problem Statement */}
+            <div className="w-full text-center mt-4" data-parallax="0.3">
+              <a
+                href="/problem-statement.pdf" // Update with the correct file path
+                download="Problem_Statement.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
+                  Download Problem Statement <Download className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </ParallaxBackground>
@@ -62,4 +78,3 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
     </section>
   )
 }
-
