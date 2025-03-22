@@ -23,7 +23,7 @@ export const GallerySection = forwardRef<HTMLDivElement>(function GallerySection
             <div className="relative group overflow-hidden rounded-lg">
               <div className="aspect-w-16 aspect-h-9 relative">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=Team"
+                  src="/team.jpg?height=300&width=500&text=Team"
                   alt="Hackathon 2023 - Coding"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -40,7 +40,7 @@ export const GallerySection = forwardRef<HTMLDivElement>(function GallerySection
             <div className="relative group overflow-hidden rounded-lg">
               <div className="aspect-w-16 aspect-h-9 relative">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=Coordinators"
+                  src="/coordinators.jpg?height=300&width=500&text=Coordinators"
                   alt="Hackathon 2023 - Presentation"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -57,7 +57,7 @@ export const GallerySection = forwardRef<HTMLDivElement>(function GallerySection
             <div className="relative group overflow-hidden rounded-lg">
               <div className="aspect-w-16 aspect-h-9 relative">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=Winners"
+                  src="/winners.jpg?height=300&width=500&text=Winners"
                   alt="Hackathon 2023 - Awards"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
