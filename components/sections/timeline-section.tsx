@@ -157,7 +157,7 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
           </div>
 
           {/* Timeline indicator dots */}
-          <div className="timeline-indicator hidden md:flex">
+          {/*<div className="timeline-indicator hidden md:flex">
             {timelineEvents.map((_, index) => (
               <div
                 key={index}
@@ -173,7 +173,7 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
                 }}
               ></div>
             ))}
-          </div>
+          </div>*/}
         </div>
 
         <div className="mt-16 text-center">
