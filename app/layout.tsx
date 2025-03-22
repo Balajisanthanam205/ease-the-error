@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <link rel="icon" href="/new tab logo.png" type="image/png" />
+       <link rel="icon" href="/logo.png" type="image/png" />
       <body>{children}</body>
     </html>
   )
