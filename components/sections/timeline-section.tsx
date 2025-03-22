@@ -77,11 +77,11 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
 
           // Calculate which timeline event is active
           const timelinePosition = scrollPosition - ref.current.offsetTop + windowHeight / 2
-          const eventHeight = timelineHeight / 2 // Each pair takes up half the timeline height
-          const activeEvent = Math.floor(timelinePosition / eventHeight) * 2
+          const eventHeight = timelineHeight / timelineEvents.length
+          const activeEvent = Math.floor(timelinePosition / eventHeight)
 
           // Clamp the active event to valid range
-          const clampedActiveEvent = Math.max(0, Math.min(Math.floor(activeEvent / 2) * 2, timelineEvents.length - 2))
+          const clampedActiveEvent = Math.max(0, Math.min(activeEvent, timelineEvents.length - 1))
           setActiveTimelineEvent(clampedActiveEvent)
 
           // Make timeline events visible when they enter the viewport
@@ -126,12 +126,11 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
             style={{ height: `${timelineProgress * 100}%` }}
           ></div>
 
-          {/* Timeline events in pairs */}
+          {/* Timeline events in linear layout */}
           <div className="">
-            {[0, 2].map((index) => (
-              <div key={index} className="timeline-pair">
-                <div className="grid grid-cols-1 gap-20">
-                  {/* First event in pair */}
+            {timelineEvents.map((event, index) => (
+              <div key={index} className="timeline-pair mb-16">
+                <div className="grid grid-cols-1 gap-10">
                   <div
                     className={`timeline-event relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-10 md:items-center ${index === activeTimelineEvent ? "visible" : ""}`}
                     data-parallax="0.1"
@@ -142,63 +141,39 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
                           {index + 1}
                         </div>
                       </div>
-                      <h3 className="text-3xl font-bold mb-4">{timelineEvents[index].title}</h3>
-                      <p className="text-gray-400 text-lg">{timelineEvents[index].description}</p>
+                      <h3 className="text-3xl font-bold mb-4">{event.title}</h3>
+                      <p className="text-gray-400 text-lg">{event.description}</p>
                     </div>
                     <div className="mt-8 md:mt-0 md:pl-10">
                       <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 transform transition-all duration-500 hover:scale-105">
-                        <p className="text-2xl font-mono">{timelineEvents[index].date}</p>
-                        <p className="text-gray-400">{timelineEvents[index].time}</p>
+                        <p className="text-2xl font-mono">{event.date}</p>
+                        <p className="text-gray-400">{event.time}</p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Second event in pair */}
-                  {index + 1 < timelineEvents.length && (
-                    <div
-                      className={`timeline-event relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-10 md:items-center ${index === activeTimelineEvent ? "visible" : ""}`}
-                      data-parallax="0.15"
-                    >
-                      <div className="md:text-right md:pr-10 md:order-1 order-2">
-                        <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 transform transition-all duration-500 hover:scale-105">
-                          <p className="text-2xl font-mono">{timelineEvents[index + 1].date}</p>
-                          <p className="text-gray-400">{timelineEvents[index + 1].time}</p>
-                        </div>
-                      </div>
-                      <div className="mt-8 md:mt-0 md:pl-10 md:order-2 order-1">
-                        <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 md:transform md:-translate-y-1/2 md:-translate-x-1/2 z-10">
-                          <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-black font-bold">
-                            {index + 2}
-                          </div>
-                        </div>
-                        <h3 className="text-3xl font-bold mb-4">{timelineEvents[index + 1].title}</h3>
-                        <p className="text-gray-400 text-lg">{timelineEvents[index + 1].description}</p>
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Timeline indicator dots */}
-        <div className="timeline-indicator hidden md:flex">
-          {[0, 1].map((pairIndex) => (
-            <div
-              key={pairIndex}
-              className={`timeline-indicator-dot ${activeTimelineEvent === pairIndex * 2 ? "active" : ""}`}
-              onClick={() => {
-                const element = document.querySelectorAll(".timeline-pair")[pairIndex]
-                if (element) {
-                  window.scrollTo({
-                    top: element.getBoundingClientRect().top + window.scrollY - 100,
-                    behavior: "smooth",
-                  })
-                }
-              }}
-            ></div>
-          ))}
+          {/* Timeline indicator dots */}
+          <div className="timeline-indicator hidden md:flex">
+            {timelineEvents.map((_, index) => (
+              <div
+                key={index}
+                className={`timeline-indicator-dot ${activeTimelineEvent === index ? "active" : ""}`}
+                onClick={() => {
+                  const element = document.querySelectorAll(".timeline-pair")[index]
+                  if (element) {
+                    window.scrollTo({
+                      top: element.getBoundingClientRect().top + window.scrollY - 100,
+                      behavior: "smooth",
+                    })
+                  }
+                }}
+              ></div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 text-center">
