@@ -43,11 +43,15 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Mentorship from industry experts</span>
+                  <span>Certificate of Excellence</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Cloud credits worth 15,000</span>
+                  <span>Recognition on Official Platforms</span>
+                </li>
+                     <li className="flex items-start">
+                  <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Opportunity to Connect with Peers</span>
                 </li>
               </ul>
             </div>
@@ -75,20 +79,17 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Exclusive access to investor network</span>
+                  <span>Certificate of Achievement</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Incubation program with leading mentors</span>
+                  <span>Recognition on Official Platforms</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Featured at major tech conference</span>
+                  <span>Opportunity to Network with Experts</span>
                 </li>
-                <li className="flex items-start">
-                  <Star className="h-5 w-5 text-white mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Premium hardware package</span>
-                </li>
+            
               </ul>
             </div>
           </div>
@@ -112,15 +113,15 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Cloud computing credits worth 10,000</span>
+                  <span>Certificate of Participation</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>One-year subscription to dev tools</span>
+                  <span>Showcase of Winning Project</span>
                 </li>
                 <li className="flex items-start">
                   <Star className="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Featured in innovation showcase</span>
+                  <span>Chance to Gain Valuable Experience</span>
                 </li>
               </ul>
             </div>
