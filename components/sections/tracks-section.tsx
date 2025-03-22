@@ -162,20 +162,40 @@ export const TracksSection = forwardRef<HTMLDivElement, TracksSectionProps>(func
           </div>
         </div>
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 text-center">
-          <h3 className="text-2xl font-bold mb-4">Open Innovation Track</h3>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Have a groundbreaking idea that doesn't fit neatly into the tracks above? The Open Innovation track welcomes
-            all creative projects that demonstrate technical excellence and innovative thinking.
-          </p>
-          <div className="inline-block relative">
-            <Image
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJtZXJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZA/l46CwEYnbFtwhxZ4s/giphy.gif"
-              alt="Open track"
-              width={300}
-              height={100}
-              className="rounded-lg"
-            />
+        {/* Open Innovation Track - Centered */}
+        <div className="max-w-xl mx-auto mb-16">
+          <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group hover:border-white transition-all duration-300">
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJtZXJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZA/l46CwEYnbFtwhxZ4s/giphy.gif"
+                alt="Open Innovation Track"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+              <div className="absolute top-4 left-4 bg-black/80 p-2 rounded-full">
+                <Code className="h-6 w-6 text-white" />
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Open Innovation Track</h3>
+              <p className="text-gray-400 mb-4">
+                Have a groundbreaking idea that doesn't fit neatly into the tracks above? The Open Innovation track
+                welcomes all creative projects that demonstrate technical excellence and innovative thinking.
+              </p>
+              <ul className="space-y-2 text-gray-400 list-disc pl-5 mb-4">
+                <li>Novel hardware solutions</li>
+                <li>Cross-domain applications</li>
+                <li>Experimental technologies</li>
+                <li>Unique problem-solving approaches</li>
+              </ul>
+              <div className="pt-4 border-t border-gray-800">
+                <div className="flex items-center text-sm text-gray-500">
+                  <Code className="h-4 w-4 mr-2" />
+                  <span>Any tech stack, any approach - innovation is key</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -8,6 +8,7 @@ import { AboutSection } from "@/components/sections/about-section"
 import { TimelineSection } from "@/components/sections/timeline-section"
 import { TracksSection } from "@/components/sections/tracks-section"
 import { PrizesSection } from "@/components/sections/prizes-section"
+import { BecomeSponsorSection } from "@/components/sections/become-sponsor-section"
 import { SponsorsSection } from "@/components/sections/sponsors-section"
 import { GallerySection } from "@/components/sections/gallery-section"
 import { FooterSection } from "@/components/sections/footer-section"
@@ -23,6 +24,7 @@ export default function Home() {
   const timelineRef = useRef<HTMLDivElement>(null)
   const tracksRef = useRef<HTMLDivElement>(null)
   const prizesRef = useRef<HTMLDivElement>(null)
+  const becomeSponsorRef = useRef<HTMLDivElement>(null)
   const sponsorsRef = useRef<HTMLDivElement>(null)
   const galleryRef = useRef<HTMLDivElement>(null)
 
@@ -33,6 +35,7 @@ export default function Home() {
       timeline: timelineRef,
       tracks: tracksRef,
       prizes: prizesRef,
+      "become-sponsor": becomeSponsorRef,
       sponsors: sponsorsRef,
       gallery: galleryRef,
     }
@@ -54,6 +57,7 @@ export default function Home() {
           { id: "timeline", label: "Timeline" },
           { id: "tracks", label: "Tracks" },
           { id: "prizes", label: "Prizes" },
+          { id: "become-sponsor", label: "Become a Sponsor" },
           { id: "sponsors", label: "Sponsors" },
           { id: "gallery", label: "Gallery" },
         ]}
@@ -69,6 +73,8 @@ export default function Home() {
       <TracksSection ref={tracksRef} scrollToSection={scrollToSection} />
 
       <PrizesSection ref={prizesRef} scrollToSection={scrollToSection} />
+
+      <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} />
 
       <SponsorsSection ref={sponsorsRef} scrollToSection={scrollToSection} />
 
