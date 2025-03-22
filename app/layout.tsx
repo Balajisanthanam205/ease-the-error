@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Ease the Error',
+  description: 'Created by Fodse',
+  generator: 'FODSE',
 }
 
 export default function RootLayout({
@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <link rel="icon" href="/new tab logo.png" type="image/png" />
       <body>{children}</body>
     </html>
   )
