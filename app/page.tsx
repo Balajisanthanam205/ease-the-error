@@ -30,7 +30,7 @@ export default function Home() {
 
   // Smooth scroll function
   const scrollToSection = (sectionId: string) => {
-    const sectionMap: Record<string, React.RefObject<HTMLDivElement>> = {
+    const sectionMap: Record<string, React.RefObject<HTMLDivElement | null>> = {
       about: aboutRef,
       timeline: timelineRef,
       tracks: tracksRef,
@@ -72,9 +72,9 @@ export default function Home() {
 
       <TracksSection ref={tracksRef} scrollToSection={scrollToSection} />
 
-      {/*<PrizesSection ref={prizesRef} scrollToSection={scrollToSection} />*/}
+      {/* <PrizesSection ref={prizesRef} scrollToSection={scrollToSection} /> */}
 
-      <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} />
+      {/* <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} /> */}
 
       <SponsorsSection ref={sponsorsRef} scrollToSection={scrollToSection} />
 

@@ -1,4 +1,4 @@
-// File: C:\Users\balaji\Desktop\git hub ease the error my\ease-the-error\app\layout.tsx
+// File: C:\Users\ADMIN\ease-the-error-4\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

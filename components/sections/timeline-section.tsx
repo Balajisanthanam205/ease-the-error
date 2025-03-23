@@ -13,101 +13,117 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
   { scrollToSection },
   ref,
 ) {
-  // Timeline animation state
   const [timelineProgress, setTimelineProgress] = useState(0)
   const [activeTimelineEvent, setActiveTimelineEvent] = useState(0)
   const timelineEvents = [
+
     {
-      title: "Registration Opens",
+      title: "Problem statements & Registration Open",
       description:
-        "Sign up early to secure your spot and get access to exclusive pre-hackathon workshops and resources.",
-      date: "August 1, 2024",
-      time: "12:00 PM EST",
+        "Problem statements released, and registrations open for participants to join and compete in the challenge.Problem statements released, and registrations open for participants to join and compete in the Hackathon.",
+      date: "March 24, 2025",
+      time: "6:00 PM IST",
     },
     {
-      title: "Team Formation & Workshops",
+      title: "Submission Deadline",
       description: "Find teammates, attend skill-building workshops, and get mentorship to prepare for the main event.",
-      date: "August 15, 2024",
-      time: "6:00 PM EST",
+      date: "April 11, 2025",
+      time: "12:00 AM IST",
+    },
+    {
+      title: "Shortlist & Waitlist Announcement",
+      description:
+        "Selected participants and waitlisted candidates will be announced. Stay tuned for further instructions.",
+      date: "April 13, 2025",
+      time: "11:00 PM IST",
     },
     {
       title: "Hackathon Kickoff",
       description:
-        "The official start of the 48-hour hackathon. Get ready for an intense and rewarding coding marathon!",
-      date: "September 1, 2024",
-      time: "10:00 AM EST",
+        "Present your projects to judges and celebrate the winners across all tracks and special categories.",
+      date: "April 18, 2025",
+      time: "10:00 AM IST",
     },
     {
-      title: "Demo Day & Awards",
+      title: "First Round Judging",
       description:
-        "Present your projects to judges and celebrate the winners across all tracks and special categories.",
-      date: "September 3, 2024",
-      time: "4:00 PM EST",
+        "Initial project evaluations begin.",
+      date: "April 18, 2025",
+      time: "4:00 PM IST",
+    },
+    {
+      title: "Second Round Judging",
+      description:
+        "2nd Round project evaluations begin.",
+      date: "April 18, 2025",
+      time: "10:00 PM IST",
+    },
+    {
+      title: "Final Round Judging",
+      description:
+        "Teams present their solutions. Judges evaluate and determine the winners of the hackathon.",
+      date: "April 19, 2025",
+      time: "9:00 AM IST",
+    },
+    {
+      title: "Valedictory & Prize Distribution",
+      description:
+        "Celebrating achievements! Winners announced, prizes awarded, and the hackathon concludes with closing remarks.",
+      date: "April 19, 2025",
+      time: "1:30 PM IST",
     },
   ]
 
-  // Handle scroll for timeline animation and parallax effects
   useEffect(() => {
     const handleScroll = () => {
-      // Parallax effect for elements with data-parallax attribute
-      const parallaxElements = document.querySelectorAll("[data-parallax]")
+      const parallaxElements = document.querySelectorAll<HTMLElement>("[data-parallax]");
       parallaxElements.forEach((element) => {
-        const speed = Number.parseFloat(element.getAttribute("data-parallax") || "0.1")
-        const rect = element.getBoundingClientRect()
-        const windowHeight = window.innerHeight
+        const speed = Number.parseFloat(element.getAttribute("data-parallax") || "0.1");
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
         if (rect.top < windowHeight && rect.bottom > 0) {
-          const yPos = (rect.top - windowHeight) * speed
-          element.style.setProperty("--parallax-y", `${yPos}px`)
+          const yPos = (rect.top - windowHeight) * speed;
+          element.style.setProperty("--parallax-y", `${yPos}px`);
         }
-      })
+      });
 
-      // Timeline animation
       if (ref && "current" in ref && ref.current) {
-        const timelineTop = ref.current.getBoundingClientRect().top
-        const timelineHeight = ref.current.offsetHeight
-        const windowHeight = window.innerHeight
-        const scrollPosition = window.scrollY
+        const timelineElement = ref.current;
+        const timelineTop = timelineElement.getBoundingClientRect().top;
+        const timelineHeight = timelineElement.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY;
 
-        // Calculate how much of the timeline is visible
         if (timelineTop < windowHeight && timelineTop > -timelineHeight) {
-          // Calculate progress (0 to 1)
-          const progress = Math.min(1, Math.max(0, 1 - timelineTop / (windowHeight * 0.8)))
-          setTimelineProgress(progress)
+          const progress = Math.min(1, Math.max(0, 1 - timelineTop / (windowHeight * 0.8)));
+          setTimelineProgress(progress);
 
-          // Calculate which timeline event is active
-          const timelinePosition = scrollPosition - ref.current.offsetTop + windowHeight / 2
-          const eventHeight = timelineHeight / timelineEvents.length
-          const activeEvent = Math.floor(timelinePosition / eventHeight)
+          const timelinePosition = scrollPosition - timelineElement.offsetTop + windowHeight / 2;
+          const eventHeight = timelineHeight / timelineEvents.length;
+          const activeEvent = Math.floor(timelinePosition / eventHeight);
+          setActiveTimelineEvent(Math.max(0, Math.min(activeEvent, timelineEvents.length - 1)));
 
-          // Clamp the active event to valid range
-          const clampedActiveEvent = Math.max(0, Math.min(activeEvent, timelineEvents.length - 1))
-          setActiveTimelineEvent(clampedActiveEvent)
-
-          // Make timeline events visible when they enter the viewport
-          const timelineEventElements = document.querySelectorAll(".timeline-event")
+          const timelineEventElements = document.querySelectorAll<HTMLElement>(".timeline-event");
           timelineEventElements.forEach((element, index) => {
-            const rect = element.getBoundingClientRect()
-            if (rect.top < windowHeight * 0.8) {
-              element.classList.add("visible")
-            } else {
-              element.classList.remove("visible")
-            }
-          })
+            const rect = element.getBoundingClientRect();
+            element.classList.toggle("visible", rect.top < windowHeight * 0.8);
+          });
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    handleScroll() // Initial check
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [ref, timelineEvents.length])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [ref, timelineEvents.length]);
 
   return (
     <section id="timeline" ref={ref} className="py-20 px-4 bg-gray-950 min-h-screen">
       <ParallaxStars count={50} className="opacity-30" />
       <div className="container mx-auto max-w-6xl">
+        {/* ... (keep the same header content) */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4" data-parallax="0.1">
             Hackathon Timeline
