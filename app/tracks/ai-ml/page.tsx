@@ -14,13 +14,13 @@ export default function AIMLTrackPage() {
   const problems = [
     {
       id: 1,
-      title: "AI-Powered Medical Diagnosis Assistant",
+      title: "OS Assistant: Smart File and Browser Manager",
       description:
-        "Develop an AI system that can assist healthcare professionals in diagnosing diseases from medical images, patient symptoms, or clinical data.",
+        "Develop an AI-powered assistant that handles everyday OS and browser tasks like creating files, deleting old ones, and organizing tabs based on simple voice or text commands from the user.",
       difficulty: "Hard",
       tags: ["Healthcare", "Computer Vision", "NLP"],
       details:
-        "The system should be able to analyze medical images (X-rays, MRIs, CT scans) and/or patient symptom descriptions to suggest possible diagnoses with confidence levels. The solution should explain its reasoning and provide references to relevant medical literature. Bonus points for solutions that can work with limited computational resources or in offline environments.",
+        "Users often struggle with managing multiple browser tabs and system files efficiently, leading to cluttered workspaces and productivity loss. A smart assistant that automates these tasks can streamline workflow and enhance user experience.",
       resources: [
         { name: "Medical Image Dataset", url: "#" },
         { name: "Symptom-Disease Correlation Database", url: "#" },
@@ -29,13 +29,13 @@ export default function AIMLTrackPage() {
     },
     {
       id: 2,
-      title: "Personalized Education Content Generator",
+      title: "Agentic AI: Software Architecture Design Enhancer",
       description:
-        "Create an AI system that generates personalized educational content based on a student's learning style, progress, and areas of difficulty.",
+        "Create an AI assistant that takes a software project idea and delivers a detailed architecture plan, including frameworks, libraries, and deployment options, refining it for accuracy and practicality.",
       difficulty: "Medium",
       tags: ["Education", "NLP", "Personalization"],
       details:
-        "The system should analyze a student's performance data, identify knowledge gaps, and generate appropriate learning materials (explanations, practice problems, visual aids) tailored to their needs. The content should adapt to different learning styles (visual, auditory, reading/writing, kinesthetic) and provide appropriate scaffolding for concepts the student finds challenging.",
+        "Software developers often spend a significant amount of time structuring projects, selecting the right technologies, and ensuring scalability. An AI assistant that automates architecture planning can speed up development cycles and improve decision-making.",
       resources: [
         { name: "Educational Content Database", url: "#" },
         { name: "Learning Styles Assessment Framework", url: "#" },
@@ -44,13 +44,13 @@ export default function AIMLTrackPage() {
     },
     {
       id: 3,
-      title: "Sustainable Agriculture AI Advisor",
+      title: "AI Music Composer",
       description:
-        "Build an AI system that helps farmers optimize crop yields while minimizing environmental impact through data-driven recommendations.",
+        "Develop an AI-powered music composer that can remix tracks intelligently, preserving musicality while introducing creative variations.",
       difficulty: "Medium",
       tags: ["Agriculture", "Sustainability", "Predictive Analytics"],
       details:
-        "The system should analyze data from various sources (weather forecasts, soil sensors, satellite imagery, historical yields) to provide actionable recommendations on planting times, irrigation schedules, fertilizer usage, and pest management. The solution should balance maximizing crop yields with minimizing water usage, chemical inputs, and carbon footprint.",
+        "Music producers and artists frequently seek fresh remixes of their tracks but lack the time or expertise to manually craft variations. AI-driven composition can generate high-quality remixes tailored to different styles and moods.",
       resources: [
         { name: "Agricultural Data Repository", url: "#" },
         { name: "Weather API Documentation", url: "#" },
@@ -59,13 +59,13 @@ export default function AIMLTrackPage() {
     },
     {
       id: 4,
-      title: "Multilingual Speech-to-Text for Low-Resource Languages",
+      title: "FinTech: Dynamic Investment Portfolio Manager",
       description:
-        "Develop a speech recognition system that works effectively for languages with limited training data available.",
+        "Design a dynamic investment portfolio manager for retail investors, leveraging real-time market data and user preferences to optimize asset allocation and risk management.",
       difficulty: "Hard",
       tags: ["Speech Recognition", "Low-Resource Languages", "Transfer Learning"],
       details:
-        "Create a system that can transcribe spoken language into text for languages that have limited available training data. The solution should leverage transfer learning from high-resource languages and/or unsupervised learning techniques to achieve reasonable accuracy with minimal language-specific training data. Focus on languages from regions that are currently underserved by commercial speech recognition systems.",
+        "Retail investors often struggle with managing their portfolios efficiently due to a lack of real-time insights and financial expertise. An AI-driven portfolio manager can provide personalized investment strategies based on risk appetite, market trends, and financial goals.",
       resources: [
         { name: "Common Voice Dataset", url: "#" },
         { name: "Low-Resource Language Samples", url: "#" },
@@ -74,13 +74,13 @@ export default function AIMLTrackPage() {
     },
     {
       id: 5,
-      title: "AI Ethics Analyzer for Machine Learning Models",
+      title: "AI-Powered Automated Interview Evaluator",
       description:
-        "Create a tool that analyzes machine learning models for potential ethical issues, biases, or fairness concerns.",
+        "Traditional interviews require human intervention to assess a candidate’s responses, leading to delays and bias.",
       difficulty: "Medium",
       tags: ["AI Ethics", "Fairness", "Model Analysis"],
       details:
-        "Develop a system that can evaluate a trained machine learning model for potential ethical concerns such as demographic biases, privacy risks, or unfair outcomes. The tool should provide detailed reports on identified issues, suggest mitigation strategies, and allow for comparative analysis of different models or versions. The solution should work across various model types and application domains.",
+        "Companies struggle with the inefficiencies of manual interview evaluation, where HR teams spend significant time assessing candidates, often introducing subjective bias. An AI-driven interview assistant can streamline the process by providing objective, real-time assessments based on speech patterns, confidence, and technical accuracy.",
       resources: [
         { name: "Fairness Indicators Library", url: "#" },
         { name: "Synthetic Test Datasets", url: "#" },
@@ -143,7 +143,7 @@ export default function AIMLTrackPage() {
               real-world challenges across healthcare, education, sustainability, and more.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+             {/*<div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-purple-400 font-medium">Difficulty:</span> Intermediate to Advanced
               </div>
@@ -153,7 +153,7 @@ export default function AIMLTrackPage() {
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-purple-400 font-medium">Team Size:</span> 1-4 members
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function AIMLTrackPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold">{problem.title}</h3>
-                        <div
+                        {/*<div
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
                             problem.difficulty === "Hard"
                               ? "bg-red-900/30 text-red-400"
@@ -281,9 +281,9 @@ export default function AIMLTrackPage() {
                           }`}
                         >
                           {problem.difficulty}
-                        </div>
+                        </div>*/}
                       </div>
-
+                      <h4 className="text-lg font-medium mb-2">Problem Statement:</h4>
                       <p className="text-gray-300 mb-4">{problem.description}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -295,11 +295,11 @@ export default function AIMLTrackPage() {
                       </div>
 
                       <div className="mt-6">
-                        <h4 className="text-lg font-medium mb-2">Problem Details</h4>
+                        <h4 className="text-lg font-medium mb-2">Study Case:</h4>
                         <p className="text-gray-400">{problem.details}</p>
                       </div>
 
-                      <div className="mt-6">
+                      {/*<div className="mt-6">
                         <h4 className="text-lg font-medium mb-2">Resources</h4>
                         <ul className="space-y-2">
                           {problem.resources.map((resource, index) => (
@@ -322,7 +322,7 @@ export default function AIMLTrackPage() {
                           <Bookmark className="h-4 w-4 mr-2" />
                           Save Problem
                         </Button>
-                      </div>
+                      </div>*/}
                     </div>
                   </div>
                 ))}
