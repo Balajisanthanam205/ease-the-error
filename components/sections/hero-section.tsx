@@ -51,13 +51,14 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
               </Button>
             </div>
 
-       {/* Second Row - Download Abstract Format (PPT) */}
-<div className="w-full text-center mt-4" data-parallax="0.3">
+{/* Second Row - Download Abstract Format (PPT) */}
+<div className="w-full flex justify-center mt-4" data-parallax="0.3">
   <a
     href="/abstract-format.pptx" // Update with the correct PPT file path
     download="Abstract_Format.pptx"
     target="_blank"
     rel="noopener noreferrer"
+    className="flex justify-center"
   >
     <button type="button" className="btn">
       <strong>DOWNLOAD ABSTRACT</strong>
@@ -72,6 +73,7 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
     </button>
   </a>
 </div>
+
 
 
           </div>
