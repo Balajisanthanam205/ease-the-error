@@ -143,11 +143,11 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Trophy className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">3,000 Cash Prize</span>
+                    <span className="text-gray-300">_,__X Cash Prize</span>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Zap className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">AI Computing Credits</span>
+                    <span className="text-gray-300">Exciting prizes</span>
                   </div>
                 </div>
                 <p className="text-gray-400">
@@ -167,11 +167,11 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Trophy className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">3,000 Cash Prize</span>
+                    <span className="text-gray-300">_,__X Cash Prize</span>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Zap className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">Blockchain Development Kit</span>
+                    <span className="text-gray-300">Exciting prizes</span>
                   </div>
                 </div>
                 <p className="text-gray-400">
@@ -191,11 +191,11 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Trophy className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">3,000 Cash Prize</span>
+                    <span className="text-gray-300">_,__X Cash Prize</span>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Zap className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">Data Science Tool Licenses</span>
+                    <span className="text-gray-300">Exciting prizes</span>
                   </div>
                 </div>
                 <p className="text-gray-400">
@@ -215,11 +215,11 @@ export const PrizesSection = forwardRef<HTMLDivElement, PrizesSectionProps>(func
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Trophy className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">3,000 Cash Prize</span>
+                    <span className="text-gray-300">_,__X Cash Prize</span>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-3 flex items-center">
                     <Zap className="h-5 w-5 text-white mr-2" />
-                    <span className="text-gray-300">Security Conference Tickets</span>
+                    <span className="text-gray-300">Exciting prizes</span>
                   </div>
                 </div>
                 <p className="text-gray-400">
