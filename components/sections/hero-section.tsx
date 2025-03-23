@@ -28,7 +28,7 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
 
 
             <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto" data-parallax="0.15">
-              design.develop.deply.
+              design.develop.deploy.
             </p>
 
             <div className="py-8" data-parallax="0.2">
