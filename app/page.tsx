@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* <PrizesSection ref={prizesRef} scrollToSection={scrollToSection} /> */}
 
-      {/* <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} /> */}
+      <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} />
 
       <SponsorsSection ref={sponsorsRef} scrollToSection={scrollToSection} />
 
