@@ -341,12 +341,12 @@ export default function AIMLTrackPage() {
             </div>
           )}
 
-          {/* Mentors Tab */}
+         {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Mentors</h2>
-              <p className="text-gray-400 mb-8">
-                Our AI & Machine Learning track mentors are industry experts and researchers who will provide guidance
+              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
+              {/*<p className="text-gray-400 mb-8">
+                Our Cybersecurity & Privacy track mentors are industry experts and researchers who will provide guidance
                 and support throughout the hackathon.
               </p>
 
@@ -369,7 +369,7 @@ export default function AIMLTrackPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-1">{mentor.name}</h3>
-                      <p className="text-purple-400 mb-3">{mentor.title}</p>
+                      <p className="text-red-400 mb-3">{mentor.title}</p>
                       <p className="text-gray-400 text-sm mb-3">{mentor.bio}</p>
                       <div className="flex gap-3">
                         <a href="#" className="text-blue-400 hover:text-blue-300">
@@ -407,15 +407,16 @@ export default function AIMLTrackPage() {
                   Our mentors are available throughout the hackathon to provide guidance and support. Don't hesitate to
                   reach out!
                 </p>
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
                   Schedule Mentor Session
                 </Button>
-              </div>
+              </div>*/}
             </div>
           )}
+
+
         </div>
       </section>
     </div>
   )
 }
-
