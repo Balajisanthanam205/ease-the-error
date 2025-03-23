@@ -177,7 +177,7 @@ export const TracksSection = forwardRef<HTMLDivElement, TracksSectionProps>(func
             <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group-hover:border-white transition-all duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJtZXJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZGJtZnRqZnRxZA/l46CwEYnbFtwhxZ4s/giphy.gif"
+                  src="https://cdn.dribbble.com/users/107759/screenshots/3745852/exclusive.gif"
                   alt="Open Innovation Track"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
