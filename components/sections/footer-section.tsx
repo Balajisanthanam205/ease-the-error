@@ -66,7 +66,7 @@ export function FooterSection() {
         <div className="mt-16 pt-8 border-t border-gray-900 text-sm text-gray-600">
           <p>© {new Date().getFullYear()} Ease the Error. All rights reserved.</p>
           <p className="mt-2 flex items-center justify-center">
-            Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> by The Forum of Data Science Engineers
+           The Forum of Data Science Engineers
           </p>
         </div>
       </div>
