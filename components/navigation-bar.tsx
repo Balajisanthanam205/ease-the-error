@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Rocket } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface NavigationBarProps {
   sections: { id: string; label: string }[]
@@ -83,11 +84,16 @@ export function NavigationBar({ sections, scrollToSection }: NavigationBarProps)
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-              EASE THE ERROR
-            </span>
-          </Link>
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+             src="/logo.png"
+             alt="Ease The Error Logo"
+            width={100} // Adjust width as needed
+            height={40} // Adjust height as needed
+              className="h-20 w-auto"
+  />
+</Link>
+
 
           <nav className="hidden md:flex items-center space-x-6">
             {sections.map((section) => (
