@@ -51,19 +51,20 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
               </Button>
             </div>
 
-            {/* Second Row - Download Problem Statement */}
-            <div className="w-full text-center mt-4" data-parallax="0.3">
-              <a
-                href="/problem-statement.pdf" // Update with the correct file path
-                download="Problem_Statement.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
-                  Download Problem Statement <Download className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-            </div>
+           {/* Second Row - Download Abstract Format (PPT) */}
+          <div className="w-full text-center mt-4" data-parallax="0.3">
+            <a
+              href="/abstract-format.pptx" // Update with the correct file path
+              download="Abstract_Format.pptx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+        <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
+            Download Abstract Format (PPT) <Download className="ml-2 h-4 w-4" />
+        </Button>
+            </a>
+          </div>
+
           </div>
         </ParallaxBackground>
       </div>
