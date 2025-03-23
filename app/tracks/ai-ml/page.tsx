@@ -4,12 +4,117 @@ import { useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import { ParticleBackground } from "@/components/particle-background"
-import { Brain, ArrowLeft, Download } from "lucide-react"
+import { Brain, ArrowLeft, Download, ExternalLink, Bookmark } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function AIMLTrackPage() {
   const [activeTab, setActiveTab] = useState("overview")
+
+  const problems = [
+    {
+      id: 1,
+      title: "AI-Powered Medical Diagnosis Assistant",
+      description:
+        "Develop an AI system that can assist healthcare professionals in diagnosing diseases from medical images, patient symptoms, or clinical data.",
+      difficulty: "Hard",
+      tags: ["Healthcare", "Computer Vision", "NLP"],
+      details:
+        "The system should be able to analyze medical images (X-rays, MRIs, CT scans) and/or patient symptom descriptions to suggest possible diagnoses with confidence levels. The solution should explain its reasoning and provide references to relevant medical literature. Bonus points for solutions that can work with limited computational resources or in offline environments.",
+      resources: [
+        { name: "Medical Image Dataset", url: "#" },
+        { name: "Symptom-Disease Correlation Database", url: "#" },
+        { name: "Research Paper: AI in Medical Diagnosis", url: "#" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Personalized Education Content Generator",
+      description:
+        "Create an AI system that generates personalized educational content based on a student's learning style, progress, and areas of difficulty.",
+      difficulty: "Medium",
+      tags: ["Education", "NLP", "Personalization"],
+      details:
+        "The system should analyze a student's performance data, identify knowledge gaps, and generate appropriate learning materials (explanations, practice problems, visual aids) tailored to their needs. The content should adapt to different learning styles (visual, auditory, reading/writing, kinesthetic) and provide appropriate scaffolding for concepts the student finds challenging.",
+      resources: [
+        { name: "Educational Content Database", url: "#" },
+        { name: "Learning Styles Assessment Framework", url: "#" },
+        { name: "Student Performance Analytics API", url: "#" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Sustainable Agriculture AI Advisor",
+      description:
+        "Build an AI system that helps farmers optimize crop yields while minimizing environmental impact through data-driven recommendations.",
+      difficulty: "Medium",
+      tags: ["Agriculture", "Sustainability", "Predictive Analytics"],
+      details:
+        "The system should analyze data from various sources (weather forecasts, soil sensors, satellite imagery, historical yields) to provide actionable recommendations on planting times, irrigation schedules, fertilizer usage, and pest management. The solution should balance maximizing crop yields with minimizing water usage, chemical inputs, and carbon footprint.",
+      resources: [
+        { name: "Agricultural Data Repository", url: "#" },
+        { name: "Weather API Documentation", url: "#" },
+        { name: "Sustainable Farming Practices Guide", url: "#" },
+      ],
+    },
+    {
+      id: 4,
+      title: "Multilingual Speech-to-Text for Low-Resource Languages",
+      description:
+        "Develop a speech recognition system that works effectively for languages with limited training data available.",
+      difficulty: "Hard",
+      tags: ["Speech Recognition", "Low-Resource Languages", "Transfer Learning"],
+      details:
+        "Create a system that can transcribe spoken language into text for languages that have limited available training data. The solution should leverage transfer learning from high-resource languages and/or unsupervised learning techniques to achieve reasonable accuracy with minimal language-specific training data. Focus on languages from regions that are currently underserved by commercial speech recognition systems.",
+      resources: [
+        { name: "Common Voice Dataset", url: "#" },
+        { name: "Low-Resource Language Samples", url: "#" },
+        { name: "Transfer Learning for ASR Paper", url: "#" },
+      ],
+    },
+    {
+      id: 5,
+      title: "AI Ethics Analyzer for Machine Learning Models",
+      description:
+        "Create a tool that analyzes machine learning models for potential ethical issues, biases, or fairness concerns.",
+      difficulty: "Medium",
+      tags: ["AI Ethics", "Fairness", "Model Analysis"],
+      details:
+        "Develop a system that can evaluate a trained machine learning model for potential ethical concerns such as demographic biases, privacy risks, or unfair outcomes. The tool should provide detailed reports on identified issues, suggest mitigation strategies, and allow for comparative analysis of different models or versions. The solution should work across various model types and application domains.",
+      resources: [
+        { name: "Fairness Indicators Library", url: "#" },
+        { name: "Synthetic Test Datasets", url: "#" },
+        { name: "AI Ethics Guidelines", url: "#" },
+      ],
+    },
+  ]
+
+  const mentors = [
+    {
+      name: "Dr. Jane Smith",
+      title: "AI Research Scientist, Tech Company",
+      bio: "PhD in Machine Learning with 10+ years of experience in computer vision and natural language processing. Previously led AI research teams at Major Tech Corp and contributed to open-source ML libraries.",
+      image: "/placeholder.svg?height=96&width=96&text=Mentor 1",
+    },
+    {
+      name: "Prof. Alex Johnson",
+      title: "Professor of Computer Science, University",
+      bio: "Leading researcher in deep learning with focus on healthcare applications. Author of 50+ papers and recipient of multiple grants for AI research. Passionate about mentoring the next generation of AI practitioners.",
+      image: "/placeholder.svg?height=96&width=96&text=Mentor 2",
+    },
+    {
+      name: "Dr. Maria Rodriguez",
+      title: "Lead Data Scientist, AI Startup",
+      bio: "Specializes in natural language processing and conversational AI. Built multiple production-level AI systems serving millions of users. Advocate for ethical AI development and deployment.",
+      image: "/placeholder.svg?height=96&width=96&text=Mentor 3",
+    },
+    {
+      name: "Dr. James Lee",
+      title: "AI Ethics Researcher",
+      bio: "Focuses on fairness, accountability, and transparency in machine learning systems. Previously worked at major tech companies developing frameworks for responsible AI. Regular speaker at AI ethics conferences.",
+      image: "/placeholder.svg?height=96&width=96&text=Mentor 4",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -161,165 +266,66 @@ export default function AIMLTrackPage() {
               </p>
 
               <div className="space-y-8">
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold">AI-Powered Medical Diagnosis Assistant</h3>
-                      <div className="px-3 py-1 rounded-full text-xs font-medium bg-red-900/30 text-red-400">Hard</div>
-                    </div>
+                {problems.map((problem) => (
+                  <div key={problem.id} className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+                    <div className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-xl font-bold">{problem.title}</h3>
+                        <div
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${
+                            problem.difficulty === "Hard"
+                              ? "bg-red-900/30 text-red-400"
+                              : problem.difficulty === "Medium"
+                                ? "bg-yellow-900/30 text-yellow-400"
+                                : "bg-green-900/30 text-green-400"
+                          }`}
+                        >
+                          {problem.difficulty}
+                        </div>
+                      </div>
 
-                    <p className="text-gray-300 mb-4">
-                      Develop an AI system that can assist healthcare professionals in diagnosing diseases from medical
-                      images, patient symptoms, or clinical data.
-                    </p>
+                      <p className="text-gray-300 mb-4">{problem.description}</p>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Healthcare</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Computer Vision</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">NLP</span>
-                    </div>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {problem.tags.map((tag, index) => (
+                          <span key={index} className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
 
-                    <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
-                      <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Details
-                      </Button>
-                      <Link href="/tracks/ai-ml/medical-diagnosis">
-                        <Button className="bg-purple-600 hover:bg-purple-700">View Problem</Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                      <div className="mt-6">
+                        <h4 className="text-lg font-medium mb-2">Problem Details</h4>
+                        <p className="text-gray-400">{problem.details}</p>
+                      </div>
 
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold">Personalized Education Content Generator</h3>
-                      <div className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-900/30 text-yellow-400">
-                        Medium
+                      <div className="mt-6">
+                        <h4 className="text-lg font-medium mb-2">Resources</h4>
+                        <ul className="space-y-2">
+                          {problem.resources.map((resource, index) => (
+                            <li key={index} className="flex items-center">
+                              <ExternalLink className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
+                              <a href={resource.url} className="text-blue-400 hover:underline">
+                                {resource.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
+                        <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
+                          <Download className="h-4 w-4 mr-2" />
+                          Download Details
+                        </Button>
+                        <Button className="bg-purple-600 hover:bg-purple-700">
+                          <Bookmark className="h-4 w-4 mr-2" />
+                          Save Problem
+                        </Button>
                       </div>
                     </div>
-
-                    <p className="text-gray-300 mb-4">
-                      Create an AI system that generates personalized educational content based on a student's learning
-                      style, progress, and areas of difficulty.
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Education</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">NLP</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Personalization</span>
-                    </div>
-
-                    <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
-                      <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Details
-                      </Button>
-                      <Link href="/tracks/ai-ml/education-content">
-                        <Button className="bg-purple-600 hover:bg-purple-700">View Problem</Button>
-                      </Link>
-                    </div>
                   </div>
-                </div>
-
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold">Sustainable Agriculture AI Advisor</h3>
-                      <div className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-900/30 text-yellow-400">
-                        Medium
-                      </div>
-                    </div>
-
-                    <p className="text-gray-300 mb-4">
-                      Build an AI system that helps farmers optimize crop yields while minimizing environmental impact
-                      through data-driven recommendations.
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Agriculture</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Sustainability</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">
-                        Predictive Analytics
-                      </span>
-                    </div>
-
-                    <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
-                      <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Details
-                      </Button>
-                      <Link href="/tracks/ai-ml/agriculture-advisor">
-                        <Button className="bg-purple-600 hover:bg-purple-700">View Problem</Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold">Multilingual Speech-to-Text for Low-Resource Languages</h3>
-                      <div className="px-3 py-1 rounded-full text-xs font-medium bg-red-900/30 text-red-400">Hard</div>
-                    </div>
-
-                    <p className="text-gray-300 mb-4">
-                      Develop a speech recognition system that works effectively for languages with limited training
-                      data available.
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Speech Recognition</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">
-                        Low-Resource Languages
-                      </span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Transfer Learning</span>
-                    </div>
-
-                    <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
-                      <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Details
-                      </Button>
-                      <Link href="/tracks/ai-ml/speech-to-text">
-                        <Button className="bg-purple-600 hover:bg-purple-700">View Problem</Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold">AI Ethics Analyzer for Machine Learning Models</h3>
-                      <div className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-900/30 text-yellow-400">
-                        Medium
-                      </div>
-                    </div>
-
-                    <p className="text-gray-300 mb-4">
-                      Create a tool that analyzes machine learning models for potential ethical issues, biases, or
-                      fairness concerns.
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">AI Ethics</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Fairness</span>
-                      <span className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300">Model Analysis</span>
-                    </div>
-
-                    <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
-                      <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Details
-                      </Button>
-                      <Link href="/tracks/ai-ml/ethics-analyzer">
-                        <Button className="bg-purple-600 hover:bg-purple-700">View Problem</Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
@@ -345,16 +351,16 @@ export default function AIMLTrackPage() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                {[1, 2, 3, 4].map((mentor) => (
+                {mentors.map((mentor, index) => (
                   <div
-                    key={mentor}
+                    key={index}
                     className="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row gap-6"
                   >
                     <div className="flex-shrink-0">
                       <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-800">
                         <Image
-                          src={`/placeholder.svg?height=96&width=96&text=Mentor ${mentor}`}
-                          alt={`Mentor ${mentor}`}
+                          src={mentor.image || "/placeholder.svg"}
+                          alt={mentor.name}
                           width={96}
                           height={96}
                           className="object-cover"
@@ -362,13 +368,9 @@ export default function AIMLTrackPage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-1">Dr. Jane Smith</h3>
-                      <p className="text-purple-400 mb-3">AI Research Scientist, Tech Company</p>
-                      <p className="text-gray-400 text-sm mb-3">
-                        PhD in Machine Learning with 10+ years of experience in computer vision and natural language
-                        processing. Previously led AI research teams at Major Tech Corp and contributed to open-source
-                        ML libraries.
-                      </p>
+                      <h3 className="text-xl font-bold mb-1">{mentor.name}</h3>
+                      <p className="text-purple-400 mb-3">{mentor.title}</p>
+                      <p className="text-gray-400 text-sm mb-3">{mentor.bio}</p>
                       <div className="flex gap-3">
                         <a href="#" className="text-blue-400 hover:text-blue-300">
                           <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
