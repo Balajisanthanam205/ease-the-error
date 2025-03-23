@@ -27,8 +27,11 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
           </h1>
 
 
-            <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto" data-parallax="0.15">
-              design.develop.deploy.
+            <p
+             className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 text-transparent bg-clip-text tracking-wide drop-shadow-lg max-w-2xl mx-auto"
+             data-parallax="0.15"
+            >
+               design.<span className="text-white">develop.</span><span className="text-green-400">deploy.</span>
             </p>
 
             <div className="py-8" data-parallax="0.2">
@@ -61,7 +64,7 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
     className="flex justify-center"
   >
     <button type="button" className="btn">
-      <strong>DOWNLOAD ABSTRACT</strong>
+      <strong>DOWNLOAD TEMPLATE</strong>
       <div id="container-stars">
         <div id="stars"></div>
       </div>
