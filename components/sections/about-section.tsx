@@ -80,7 +80,7 @@ export const AboutSection = forwardRef<HTMLDivElement, AboutSectionProps>(functi
                 <Code className="h-8 w-8 text-white" />
               </div>
             </div>
-            <h3 className="text-xl font-bold mb-2 text-center">4 Exciting Tracks</h3>
+            <h3 className="text-xl font-bold mb-2 text-center">5 Exciting Tracks</h3>
             <p className="text-gray-400 text-center">
               Choose from multiple specialized tracks designed to challenge your creativity and technical skills.
             </p>
@@ -92,7 +92,7 @@ export const AboutSection = forwardRef<HTMLDivElement, AboutSectionProps>(functi
                 <Trophy className="h-8 w-8 text-white" />
               </div>
             </div>
-            <h3 className="text-xl font-bold mb-2 text-center">50,000 in Prizes</h3>
+            <h3 className="text-xl font-bold mb-2 text-center">Exciting prizes</h3>
             <p className="text-gray-400 text-center">
               Compete for substantial cash prizes, mentorship opportunities, and valuable tech resources.
             </p>
