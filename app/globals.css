@@ -25,13 +25,25 @@
   --radius: 0.5rem;
 }
 
-body {
-  background-color: black;
-  color: white;
+@layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+  
+  body {
+    @apply w-full overflow-x-hidden;
+    background-color: black;
+    color: white;
+  }
+
+  section {
+    @apply w-full max-w-[100vw] overflow-hidden;
+  }
 }
 
 /* Timeline styles */
 .timeline-event {
+  @apply w-full max-w-[100vw];
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -68,6 +80,7 @@ body {
 
 /* Parallax effect */
 [data-parallax] {
+  @apply max-w-[100vw];
   transform: translateY(var(--parallax-y, 0));
 }
 
@@ -76,6 +89,7 @@ body {
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
   --tw-aspect-w: 16;
+  @apply overflow-hidden;
 }
 
 .aspect-h-9 {
@@ -86,6 +100,7 @@ body {
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
   --tw-aspect-w: 1;
+  @apply overflow-hidden;
 }
 
 .aspect-h-1 {
@@ -103,9 +118,9 @@ body {
   left: 0;
 }
 
-
 /* Custom Button Styles */
 .btn {
+  @apply max-w-[90vw] mx-auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,6 +166,7 @@ strong {
 }
 
 #glow {
+  @apply max-w-[80vw] mx-auto;
   position: absolute;
   display: flex;
   width: 12rem;
@@ -275,4 +291,12 @@ strong {
   }
 }
 
-
+@media (min-width: 768px) {
+  .btn {
+    @apply max-w-none;
+  }
+  
+  #glow {
+    @apply max-w-none;
+  }
+}

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useRef } from "react"
 import { HeroSection } from "@/components/sections/hero-section"
 import { AboutSection } from "@/components/sections/about-section"
@@ -50,7 +49,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white overflow-x-hidden">
       <NavigationBar
         sections={[
           { id: "about", label: "About" },
@@ -64,24 +63,25 @@ export default function Home() {
         scrollToSection={scrollToSection}
       />
 
-      <HeroSection hackathonDate={hackathonDate} scrollToSection={scrollToSection} />
+      <main className="w-full max-w-[100vw] overflow-hidden">
+        <HeroSection hackathonDate={hackathonDate} scrollToSection={scrollToSection} />
 
-      <AboutSection ref={aboutRef} scrollToSection={scrollToSection} />
+        <AboutSection ref={aboutRef} scrollToSection={scrollToSection} />
 
-      <TimelineSection ref={timelineRef} scrollToSection={scrollToSection} />
+        <TimelineSection ref={timelineRef} scrollToSection={scrollToSection} />
 
-      <TracksSection ref={tracksRef} scrollToSection={scrollToSection} />
+        <TracksSection ref={tracksRef} scrollToSection={scrollToSection} />
 
-      {/* <PrizesSection ref={prizesRef} scrollToSection={scrollToSection} /> */}
+        {/* <PrizesSection ref={prizesRef} scrollToSection={scrollToSection} /> */}
 
-      <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} />
+        <BecomeSponsorSection ref={becomeSponsorRef} scrollToSection={scrollToSection} />
 
-      <SponsorsSection ref={sponsorsRef} scrollToSection={scrollToSection} />
+        <SponsorsSection ref={sponsorsRef} scrollToSection={scrollToSection} />
 
-      <GallerySection ref={galleryRef} />
+        <GallerySection ref={galleryRef} />
 
-      <FooterSection />
+        <FooterSection />
+      </main>
     </div>
   )
 }
-

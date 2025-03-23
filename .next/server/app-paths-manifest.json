@@ -1,6 +1,6 @@
 {
   "/tracks/data-analytics/page": "app/tracks/data-analytics/page.js",
-  "/page": "app/page.js",
   "/tracks/ai-ml/page": "app/tracks/ai-ml/page.js",
+  "/page": "app/page.js",
   "/tracks/cybersecurity/page": "app/tracks/cybersecurity/page.js"
 }
