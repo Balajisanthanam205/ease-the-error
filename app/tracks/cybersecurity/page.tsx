@@ -143,7 +143,7 @@ export default function CybersecurityTrackPage() {
               challenges across various domains.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+             {/*<div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-red-400 font-medium">Difficulty:</span> Intermediate to Advanced
               </div>
@@ -153,7 +153,7 @@ export default function CybersecurityTrackPage() {
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-red-400 font-medium">Team Size:</span> 1-4 members
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function CybersecurityTrackPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold">{problem.title}</h3>
-                        <div
+                         {/*<div
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
                             problem.difficulty === "Hard"
                               ? "bg-red-900/30 text-red-400"
@@ -281,9 +281,10 @@ export default function CybersecurityTrackPage() {
                           }`}
                         >
                           {problem.difficulty}
-                        </div>
+                        </div>*/}
                       </div>
-
+                      
+                      <h4 className="text-lg font-medium mb-2">Problem Statement:</h4>
                       <p className="text-gray-300 mb-4">{problem.description}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -295,11 +296,11 @@ export default function CybersecurityTrackPage() {
                       </div>
 
                       <div className="mt-6">
-                        <h4 className="text-lg font-medium mb-2">Problem Details</h4>
+                        <h4 className="text-lg font-medium mb-2">Study Case:</h4>
                         <p className="text-gray-400">{problem.details}</p>
                       </div>
 
-                      <div className="mt-6">
+                     {/*  <div className="mt-6">
                         <h4 className="text-lg font-medium mb-2">Resources</h4>
                         <ul className="space-y-2">
                           {problem.resources.map((resource, index) => (
@@ -322,7 +323,7 @@ export default function CybersecurityTrackPage() {
                           <Bookmark className="h-4 w-4 mr-2" />
                           Save Problem
                         </Button>
-                      </div>
+                      </div>*/}
                     </div>
                   </div>
                 ))}
@@ -344,8 +345,8 @@ export default function CybersecurityTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Mentors</h2>
-              <p className="text-gray-400 mb-8">
+              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
+              {/*<p className="text-gray-400 mb-8">
                 Our Cybersecurity & Privacy track mentors are industry experts and researchers who will provide guidance
                 and support throughout the hackathon.
               </p>
@@ -410,9 +411,11 @@ export default function CybersecurityTrackPage() {
                 <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
                   Schedule Mentor Session
                 </Button>
-              </div>
+              </div>*/}
             </div>
           )}
+
+
         </div>
       </section>
     </div>

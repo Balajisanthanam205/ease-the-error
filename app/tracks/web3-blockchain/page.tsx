@@ -14,80 +14,81 @@ export default function Web3BlockchainTrackPage() {
   const problems = [
     {
       id: 1,
-      title: "Decentralized Identity Verification System",
+      title: "Decentralized Uber: Blockchain-Based Ride-Sharing",
       description:
-        "Build a blockchain-based identity verification system that gives users control over their personal data while enabling trusted verification.",
+        "Develop a decentralized ride-sharing platform that eliminates intermediaries, reduces commission fees, ensures fair driver earnings, and enhances rider privacy.",
       difficulty: "Hard",
-      tags: ["Identity", "Privacy", "DID"],
+      tags: ["Ride-Sharing", "Blockchain", "Smart Contracts"],
       details:
-        "Create a solution that allows users to store their identity credentials securely on a blockchain and selectively share verified information with third parties without revealing the underlying data. The system should support various types of credentials (education, employment, government IDs) and implement zero-knowledge proofs or similar privacy-preserving techniques.",
+        "The system should leverage blockchain and smart contracts for trustless transactions, dynamic pricing, and decentralized governance.",
       resources: [
-        { name: "Decentralized Identity Foundation Resources", url: "#" },
-        { name: "Zero-Knowledge Proofs Documentation", url: "#" },
-        { name: "W3C DID Specifications", url: "#" },
+        { name: "Blockchain Smart Contracts Guide", url: "#" },
+        { name: "Decentralized Ride-Sharing Research", url: "#" },
+        { name: "P2P Network Implementation", url: "#" },
       ],
     },
     {
       id: 2,
-      title: "Cross-Chain DeFi Aggregator",
+      title: "Decentralized Supply Chain Tracking",
       description:
-        "Develop a platform that aggregates DeFi opportunities across multiple blockchains to maximize returns and minimize fees.",
+        "Design a blockchain-based supply chain tracking system that ensures transparency, traceability, and authenticity of products from origin to consumer.",
       difficulty: "Medium",
-      tags: ["DeFi", "Cross-Chain", "Yield Optimization"],
+      tags: ["Supply Chain", "Blockchain", "Traceability"],
       details:
-        "Build a solution that scans multiple blockchains for yield farming, lending, and liquidity provision opportunities, comparing returns, risks, and gas costs. The platform should recommend optimal strategies based on user preferences and facilitate cross-chain transactions through bridges or similar technologies. Include features for tracking performance and rebalancing positions.",
+        "Build a solution that provides real-time tracking, automated compliance checks, and verifiable product authenticity.",
       resources: [
-        { name: "Multi-Chain API Documentation", url: "#" },
-        { name: "DeFi Protocol Comparison Dataset", url: "#" },
-        { name: "Cross-Chain Bridge Documentation", url: "#" },
+        { name: "Supply Chain Blockchain Guide", url: "#" },
+        { name: "IoT Integration for Supply Chain", url: "#" },
+        { name: "Decentralized Ledgers Overview", url: "#" },
       ],
     },
     {
       id: 3,
-      title: "DAO Governance Enhancement Tools",
+      title: "Blockchain-Based DeFi Microloans for Financial Inclusion",
       description:
-        "Create tools to improve participation, transparency, and effectiveness in decentralized autonomous organization governance.",
+        "Develop a blockchain-based DeFi microloan platform that provides borderless, collateral-free, and low-interest loans through smart contracts and community-based trust mechanisms.",
       difficulty: "Medium",
-      tags: ["DAO", "Governance", "Voting"],
+      tags: ["DeFi", "Microloans", "Financial Inclusion"],
       details:
-        "Develop a suite of tools that address common challenges in DAO governance, such as low participation rates, uninformed voting, and governance attacks. Features might include delegation mechanisms, reputation systems, proposal simulation tools, or education resources. The solution should be adaptable to different DAO structures and governance models.",
+        "The system should use on-chain reputation, social staking (community endorsements), and AI-based risk assessment to determine borrower credibility.",
       resources: [
-        { name: "DAO Governance Frameworks", url: "#" },
-        { name: "On-Chain Voting Mechanisms", url: "#" },
-        { name: "DAO Analytics Platform", url: "#" },
+        { name: "DeFi Lending Platforms", url: "#" },
+        { name: "AI-Based Credit Scoring", url: "#" },
+        { name: "Smart Contracts for Finance", url: "#" },
       ],
     },
     {
       id: 4,
-      title: "Decentralized Content Monetization Platform",
+      title: "Blockchain-Based Decentralized Copyright Protection",
       description:
-        "Build a platform that enables creators to monetize digital content directly from consumers without intermediaries.",
-      difficulty: "Hard",
-      tags: ["Content", "Monetization", "Creators"],
+        "Build a blockchain-based copyright registry that ensures immutable proof of ownership and automatic royalty payments.",
+      difficulty: "Medium",
+      tags: ["Copyright", "NFTs", "Intellectual Property"],
       details:
-        "Create a decentralized platform where creators can publish and monetize their content (articles, music, videos, etc.) through various mechanisms such as pay-per-view, subscriptions, or microtipping. The solution should ensure creators receive fair compensation while providing consumers with affordable access to content. Include features for discovery, recommendation, and reputation.",
+        "The system should allow creators to mint digital assets on-chain and receive royalties via smart contracts whenever their work is sold or streamed.",
       resources: [
-        { name: "Content Tokenization Standards", url: "#" },
-        { name: "Decentralized Storage Solutions", url: "#" },
-        { name: "Micropayment Channels Documentation", url: "#" },
+        { name: "NFT Standards and Implementation", url: "#" },
+        { name: "Intellectual Property Laws & Blockchain", url: "#" },
+        { name: "Royalty Smart Contracts", url: "#" },
       ],
     },
     {
       id: 5,
-      title: "Supply Chain Transparency System",
+      title: "Secure Blockchain-Based E-Voting System",
       description:
-        "Develop a blockchain-based system that provides end-to-end transparency and traceability in supply chains.",
-      difficulty: "Medium",
-      tags: ["Supply Chain", "Traceability", "Enterprise"],
+        "Develop a blockchain-based voting system that enhances security, transparency, and trust while maintaining voter anonymity.",
+      difficulty: "Hard",
+      tags: ["E-Voting", "Blockchain", "Security"],
       details:
-        "Build a solution that tracks products from raw materials to finished goods, recording key information at each stage of the supply chain on a blockchain. The system should enable verification of ethical sourcing, sustainability claims, and product authenticity. Include features for consumer interaction, such as QR code scanning to access product journey information.",
+        "The system should ensure tamper-proof, verifiable elections while preventing fraud and improving accessibility.",
       resources: [
-        { name: "Supply Chain Data Standards", url: "#" },
-        { name: "IoT Integration Guidelines", url: "#" },
-        { name: "Enterprise Blockchain Frameworks", url: "#" },
+        { name: "Blockchain Voting Mechanisms", url: "#" },
+        { name: "Decentralized Governance and Elections", url: "#" },
+        { name: "Cryptographic Voting Protocols", url: "#" },
       ],
     },
-  ]
+  ];
+  
 
   const mentors = [
     {
@@ -143,7 +144,7 @@ export default function Web3BlockchainTrackPage() {
               address real-world problems across finance, identity, governance, and more.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+           {/* <div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-blue-400 font-medium">Difficulty:</span> Intermediate to Advanced
               </div>
@@ -153,7 +154,7 @@ export default function Web3BlockchainTrackPage() {
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-blue-400 font-medium">Team Size:</span> 1-4 members
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
@@ -271,7 +272,7 @@ export default function Web3BlockchainTrackPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold">{problem.title}</h3>
-                        <div
+                       {/* <div
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
                             problem.difficulty === "Hard"
                               ? "bg-red-900/30 text-red-400"
@@ -281,9 +282,9 @@ export default function Web3BlockchainTrackPage() {
                           }`}
                         >
                           {problem.difficulty}
-                        </div>
+                        </div>*/}
                       </div>
-
+                      <h4 className="text-lg font-medium mb-2">Problem Statement:</h4>
                       <p className="text-gray-300 mb-4">{problem.description}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -295,11 +296,11 @@ export default function Web3BlockchainTrackPage() {
                       </div>
 
                       <div className="mt-6">
-                        <h4 className="text-lg font-medium mb-2">Problem Details</h4>
+                        <h4 className="text-lg font-medium mb-2">Study Case:</h4>
                         <p className="text-gray-400">{problem.details}</p>
                       </div>
 
-                      <div className="mt-6">
+                     {/* <div className="mt-6">
                         <h4 className="text-lg font-medium mb-2">Resources</h4>
                         <ul className="space-y-2">
                           {problem.resources.map((resource, index) => (
@@ -322,7 +323,7 @@ export default function Web3BlockchainTrackPage() {
                           <Bookmark className="h-4 w-4 mr-2" />
                           Save Problem
                         </Button>
-                      </div>
+                      </div>*/}
                     </div>
                   </div>
                 ))}
@@ -344,8 +345,8 @@ export default function Web3BlockchainTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Mentors</h2>
-              <p className="text-gray-400 mb-8">
+              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
+              {/*<p className="text-gray-400 mb-8">
                 Our Web3 & Blockchain track mentors are industry experts and researchers who will provide guidance and
                 support throughout the hackathon.
               </p>
@@ -410,7 +411,7 @@ export default function Web3BlockchainTrackPage() {
                 <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                   Schedule Mentor Session
                 </Button>
-              </div>
+              </div>*/}
             </div>
           )}
         </div>

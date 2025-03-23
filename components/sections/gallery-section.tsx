@@ -57,7 +57,7 @@ export const GallerySection = forwardRef<HTMLDivElement>(function GallerySection
 
         {/* Ease the Error 2023 Section */}
         <div>
-          <h3 className="text-2xl font-bold mb-8">Ease the Error 2023</h3>
+          {/*<h3 className="text-2xl font-bold mb-8">Ease the Error 2023</h3>*/}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {images2023.map((img, index) => (
               <div key={index} className="relative group overflow-hidden rounded-lg">
@@ -78,11 +78,11 @@ export const GallerySection = forwardRef<HTMLDivElement>(function GallerySection
         </div>
 
         {/* View More Button */}
-        <div className="mt-12 text-center">
+        {/*<div className="mt-12 text-center">
           <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-900">
             View More Photos <Camera className="ml-2 h-4 w-4" />
           </Button>
-        </div>
+        </div>*/}
       </div>
     </section>
   )

@@ -14,80 +14,81 @@ export default function DataAnalyticsTrackPage() {
   const problems = [
     {
       id: 1,
-      title: "Interactive Data Visualization Dashboard",
+      title: "Predicting Patient Readmission in Hospitals",
       description:
-        "Create an interactive dashboard that transforms complex datasets into intuitive visualizations for non-technical users.",
-      difficulty: "Medium",
-      tags: ["Data Visualization", "UX/UI", "Interactive"],
+        "Develop a predictive model to identify patients at risk of readmission within 30 days post-discharge, incorporating socioeconomic and environmental factors.",
+      difficulty: "Hard",
+      tags: ["Healthcare", "Machine Learning", "Predictive Analytics"],
       details:
-        "Develop a web-based dashboard that allows users to upload, analyze, and visualize complex datasets without requiring technical expertise. The solution should automatically suggest appropriate visualization types based on data characteristics, allow for interactive exploration (filtering, drilling down, etc.), and enable sharing of insights. Focus on making complex data patterns immediately apparent through thoughtful visualization design.",
+        "Hospital XYZ observed that 15% of discharged patients return within a month due to complications, with a significant overlap in patients from specific socio-economic backgrounds. This trend highlights the need to consider external factors like access to healthcare, living conditions, and support systems.",
       resources: [
-        { name: "Sample Datasets Repository", url: "#" },
-        { name: "Visualization Best Practices Guide", url: "#" },
-        { name: "Dashboard UX Research", url: "#" },
+        { name: "Healthcare Datasets Repository", url: "#" },
+        { name: "Predictive Modeling in Healthcare Guide", url: "#" },
+        { name: "Readmission Risk Factors Research", url: "#" },
       ],
     },
     {
       id: 2,
-      title: "Predictive Analytics for Small Businesses",
+      title: "Real-Time Anomaly Detection in Credit Card Transactions",
       description:
-        "Build a tool that helps small businesses forecast key metrics and make data-driven decisions without requiring data science expertise.",
+        "Design a system to detect fraudulent credit card transactions in real-time, while considering user behavioral drift over time.",
       difficulty: "Hard",
-      tags: ["Predictive Analytics", "Small Business", "Forecasting"],
+      tags: ["Fraud Detection", "Anomaly Detection", "Finance"],
       details:
-        "Create a solution that enables small business owners to leverage predictive analytics for forecasting sales, inventory needs, staffing requirements, or other key business metrics. The tool should be accessible to users without data science expertise, provide actionable insights rather than just raw predictions, and explain its reasoning in business terms. The solution should work with limited historical data and common small business data formats.",
+        "Bank ABC reported $10 million in annual losses due to fraudulent activities. Analysts observed that fraudsters mimic legitimate user behavior over time, gradually altering patterns to evade detection systems.",
       resources: [
-        { name: "Small Business Dataset", url: "#" },
-        { name: "Forecasting Algorithms Documentation", url: "#" },
-        { name: "Business Metrics Guide", url: "#" },
+        { name: "Fraud Detection Datasets", url: "#" },
+        { name: "Anomaly Detection Algorithms", url: "#" },
+        { name: "Financial Transaction Security Guide", url: "#" },
       ],
     },
     {
       id: 3,
-      title: "Real-time Data Anomaly Detection System",
+      title: "Optimizing Urban Public Transport Scheduling",
       description:
-        "Develop a system that monitors data streams in real-time to detect and alert on anomalies or unusual patterns.",
-      difficulty: "Hard",
-      tags: ["Anomaly Detection", "Real-time", "Monitoring"],
+        "Develop a predictive model to optimize bus schedules by considering passenger demand, traffic patterns, and the carbon footprint of each route.",
+      difficulty: "Medium",
+      tags: ["Transport", "Sustainability", "AI Optimization"],
       details:
-        "Build a solution that can monitor multiple data streams in real-time, automatically detect anomalies or unusual patterns, and alert relevant stakeholders. The system should learn normal patterns over time, minimize false positives while catching true anomalies, and provide context about why a particular data point is considered anomalous. Applications could include network traffic monitoring, IoT sensor data, financial transactions, or system performance metrics.",
+        "Motorville’s City Transport Authority is under pressure to reduce its carbon emissions by 20% within the next 5 years. Inefficient scheduling has resulted in buses running below capacity and higher emissions per passenger.",
       resources: [
-        { name: "Streaming Data API", url: "#" },
-        { name: "Anomaly Detection Algorithms", url: "#" },
-        { name: "Alert System Design Guide", url: "#" },
+        { name: "Public Transport Optimization Techniques", url: "#" },
+        { name: "Traffic and Passenger Demand Datasets", url: "#" },
+        { name: "Carbon Footprint Analysis Tools", url: "#" },
       ],
     },
     {
       id: 4,
-      title: "Data Storytelling Platform",
+      title: "Sentiment Analysis for Movie Box Office Predictions",
       description:
-        "Create a platform that helps users transform data analysis into compelling visual stories and narratives.",
+        "Analyze social media sentiment to predict the opening weekend box office revenue of movies and assess their long-term cultural impact.",
       difficulty: "Medium",
-      tags: ["Data Storytelling", "Narrative", "Communication"],
+      tags: ["Social Media", "NLP", "Entertainment"],
       details:
-        "Develop a platform that bridges the gap between data analysis and effective communication by helping users create data-driven stories. The solution should guide users through selecting key insights, creating a narrative structure, choosing appropriate visualizations, and adding context. The platform should support multiple output formats (presentations, reports, web pages) and help users tailor their stories to different audiences.",
+        "Studio Alpha wants to understand the dual role of sentiment: predicting financial success and gauging cultural influence (e.g., viral trends, memes).",
       resources: [
-        { name: "Data Storytelling Framework", url: "#" },
-        { name: "Narrative Visualization Research", url: "#" },
-        { name: "Sample Data Stories", url: "#" },
+        { name: "Social Media Sentiment Analysis Guide", url: "#" },
+        { name: "Box Office Prediction Models", url: "#" },
+        { name: "NLP Techniques for Trend Analysis", url: "#" },
       ],
     },
     {
       id: 5,
-      title: "Geospatial Data Analysis Tool",
+      title: "User Behavior Analysis Track",
       description:
-        "Build a tool that makes complex geospatial data analysis accessible to non-specialists through intuitive visualizations and interfaces.",
+        "Develop a solution to identify distinct community groups within the user base based on interaction patterns and interests.",
       difficulty: "Medium",
-      tags: ["Geospatial", "Maps", "Location Data"],
+      tags: ["User Analytics", "AI Clustering", "Community Engagement"],
       details:
-        "Create a solution that enables users to analyze and visualize location-based data without requiring GIS expertise. The tool should support common geospatial data formats, enable layering of multiple data sources on maps, provide spatial analysis functions (clustering, heat maps, proximity analysis), and allow for interactive exploration. Focus on making geospatial insights discoverable through intuitive interfaces and visualizations.",
+        "Online platforms and digital communities struggle to understand user behavior effectively, leading to generic content delivery and poor engagement. A system that analyzes user interactions can help categorize audience segments, enabling better community management and personalized experiences.",
       resources: [
-        { name: "Geospatial Data Repository", url: "#" },
-        { name: "Mapping Libraries Documentation", url: "#" },
-        { name: "Spatial Analysis Techniques", url: "#" },
+        { name: "User Interaction Datasets", url: "#" },
+        { name: "Clustering Algorithms for Behavior Analysis", url: "#" },
+        { name: "Community Engagement Strategies", url: "#" },
       ],
     },
-  ]
+  ];
+  
 
   const mentors = [
     {
@@ -143,7 +144,7 @@ export default function DataAnalyticsTrackPage() {
               users and use cases.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+           {/* <div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-green-400 font-medium">Difficulty:</span> Beginner to Advanced
               </div>
@@ -153,7 +154,7 @@ export default function DataAnalyticsTrackPage() {
               <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
                 <span className="text-green-400 font-medium">Team Size:</span> 1-4 members
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
@@ -271,7 +272,7 @@ export default function DataAnalyticsTrackPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold">{problem.title}</h3>
-                        <div
+                        {/*<div
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
                             problem.difficulty === "Hard"
                               ? "bg-red-900/30 text-red-400"
@@ -281,9 +282,9 @@ export default function DataAnalyticsTrackPage() {
                           }`}
                         >
                           {problem.difficulty}
-                        </div>
+                        </div>*/}
                       </div>
-
+                      <h4 className="text-lg font-medium mb-2">Problem Statement:</h4>
                       <p className="text-gray-300 mb-4">{problem.description}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
@@ -295,11 +296,11 @@ export default function DataAnalyticsTrackPage() {
                       </div>
 
                       <div className="mt-6">
-                        <h4 className="text-lg font-medium mb-2">Problem Details</h4>
+                        <h4 className="text-lg font-medium mb-2">Study Case:</h4>
                         <p className="text-gray-400">{problem.details}</p>
                       </div>
 
-                      <div className="mt-6">
+                      {/*<div className="mt-6">
                         <h4 className="text-lg font-medium mb-2">Resources</h4>
                         <ul className="space-y-2">
                           {problem.resources.map((resource, index) => (
@@ -322,7 +323,7 @@ export default function DataAnalyticsTrackPage() {
                           <Bookmark className="h-4 w-4 mr-2" />
                           Save Problem
                         </Button>
-                      </div>
+                      </div>*/}
                     </div>
                   </div>
                 ))}
@@ -344,8 +345,8 @@ export default function DataAnalyticsTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Mentors</h2>
-              <p className="text-gray-400 mb-8">
+              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
+              {/*<p className="text-gray-400 mb-8">
                 Our Data Analytics & Visualization track mentors are industry experts and researchers who will provide
                 guidance and support throughout the hackathon.
               </p>
@@ -410,7 +411,7 @@ export default function DataAnalyticsTrackPage() {
                 <Button className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700">
                   Schedule Mentor Session
                 </Button>
-              </div>
+              </div>*/}
             </div>
           )}
         </div>
