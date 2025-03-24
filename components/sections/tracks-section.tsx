@@ -235,55 +235,53 @@ export const TracksSection = forwardRef<HTMLDivElement, TracksSectionProps>(func
 
        {/* Open Innovation Track - Centered */}
 <div className="max-w-xl mx-auto mb-16">
-  <Link href="#" className="block group">
-    <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group-hover:border-amber-500 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.15)] transition-all duration-300 relative cursor-pointer transform group-hover:scale-[1.02]">
-      
-      {/* Explore Track (Now Always Visible) */}
-      {/*<div className="absolute top-3 right-3 bg-amber-600/90 text-white text-xs font-medium px-3 py-1 rounded-full z-10 shadow-md">
-        Explore Track
-      </div>*/}
+  <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group-hover:border-amber-500 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.15)] transition-all duration-300 relative cursor-pointer transform group-hover:scale-[1.02]">
+    
+    {/* Explore Track (Now Always Visible) */}
+    {/*<div className="absolute top-3 right-3 bg-amber-600/90 text-white text-xs font-medium px-3 py-1 rounded-full z-10 shadow-md">
+      Explore Track
+    </div>*/}
 
-      <div className="relative h-48 overflow-hidden">
-        <Image
-          src="https://cdn.dribbble.com/users/107759/screenshots/3745852/exclusive.gif"
-          alt="Open Innovation Track"
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-        <div className="absolute top-4 left-4 bg-black/80 p-2 rounded-full">
-          <Lightbulb className="h-6 w-6 text-white" />
-        </div>
-      </div>
-
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-amber-400">
-          Open Innovation Track
-        </h3>
-        <p className="text-gray-400 mb-4">
-          Have a groundbreaking idea that doesn't fit neatly into the tracks above? The Open Innovation track welcomes all creative projects that demonstrate technical excellence and innovative thinking.
-        </p>
-        <ul className="space-y-2 text-gray-400 list-disc pl-5 mb-4">
-          <li>Novel hardware solutions</li>
-          <li>Cross-domain applications</li>
-          <li>Experimental technologies</li>
-          <li>Unique problem-solving approaches</li>
-        </ul>
-
-        {/* View Details (Now Always Visible) */}
-        <div className="pt-4 border-t border-gray-800 flex justify-between items-center">
-          <div className="flex items-center text-sm text-gray-500">
-            <Code className="h-4 w-4 mr-2" />
-            <span>Any tech stack, any approach - innovation is key</span>
-          </div>
-          {/*<span className="text-amber-400 flex items-center gap-1 text-sm font-medium">
-            View Details <ArrowRight className="h-3 w-3" />
-          </span>*/}
-        </div>
-
+    <div className="relative h-48 overflow-hidden">
+      <Image
+        src="https://cdn.dribbble.com/users/107759/screenshots/3745852/exclusive.gif"
+        alt="Open Innovation Track"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+      <div className="absolute top-4 left-4 bg-black/80 p-2 rounded-full">
+        <Lightbulb className="h-6 w-6 text-white" />
       </div>
     </div>
-  </Link>
+
+    <div className="p-6">
+      <h3 className="text-xl font-bold mb-2 text-amber-400">
+        Open Innovation Track
+      </h3>
+      <p className="text-gray-400 mb-4">
+        Have a groundbreaking idea that doesn't fit neatly into the tracks above? The Open Innovation track welcomes all creative projects that demonstrate technical excellence and innovative thinking.
+      </p>
+      <ul className="space-y-2 text-gray-400 list-disc pl-5 mb-4">
+        <li>Novel hardware solutions</li>
+        <li>Cross-domain applications</li>
+        <li>Experimental technologies</li>
+        <li>Unique problem-solving approaches</li>
+      </ul>
+
+      {/* View Details (Now Always Visible) */}
+      <div className="pt-4 border-t border-gray-800 flex justify-between items-center">
+        <div className="flex items-center text-sm text-gray-500">
+          <Code className="h-4 w-4 mr-2" />
+          <span>Any tech stack, any approach - innovation is key</span>
+        </div>
+        {/*<span className="text-amber-400 flex items-center gap-1 text-sm font-medium">
+          View Details <ArrowRight className="h-3 w-3" />
+        </span>*/}
+      </div>
+
+    </div>
+  </div>
 </div>
 
 

@@ -1,5 +1,5 @@
 {
   "/page": "app/page.js",
-  "/tracks/data-analytics/page": "app/tracks/data-analytics/page.js",
-  "/tracks/cybersecurity/page": "app/tracks/cybersecurity/page.js"
+  "/tracks/cybersecurity/page": "app/tracks/cybersecurity/page.js",
+  "/tracks/data-analytics/page": "app/tracks/data-analytics/page.js"
 }
