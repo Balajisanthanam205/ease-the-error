@@ -288,9 +288,9 @@ export const TracksSection = forwardRef<HTMLDivElement, TracksSectionProps>(func
 
 
         <div className="mt-16 text-center">
-          <Button size="lg" className="bg-white text-black hover:bg-gray-200" onClick={() => scrollToSection("prizes")}>
+          {/* <Button size="lg" className="bg-white text-black hover:bg-gray-200" onClick={() => scrollToSection("prizes")}>
             View Prizes <ChevronDown className="ml-2 h-4 w-4" />
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

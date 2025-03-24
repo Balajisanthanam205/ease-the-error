@@ -15,6 +15,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/tracks/cybersecurity/page.js"
+    ],
+    "/tracks/data-analytics/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tracks/data-analytics/page.js"
     ]
   }
 }
