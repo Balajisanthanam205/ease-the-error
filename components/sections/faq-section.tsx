@@ -38,7 +38,7 @@ export const FAQSection = forwardRef<HTMLDivElement, FAQSectionProps>(function F
     },
     {
       q: "What should we bring?",
-      a: "laptop, charger, and student ID. Online participants need a stable internet connection.",
+      a: "Sufficient laptops, chargers, college student ID, WiFi dongles, and extension boxes.",
       category: "Logistics",
     },
     {
