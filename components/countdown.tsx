@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react"
 
-interface CountdownProps {
-  targetDate: Date
-}
-
-export function Countdown({ targetDate }: CountdownProps) {
+export function Countdown() {
+  // Set the target date to April 18th, 2025 at 10:00 AM
+  const targetDate = new Date('2025-04-18T10:00:00');
+  
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -26,15 +25,19 @@ export function Countdown({ targetDate }: CountdownProps) {
 
         setTimeLeft({ days, hours, minutes, seconds })
       } else {
+        // When countdown is complete
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
       }
     }
 
+    // Calculate immediately
     calculateTimeLeft()
+    
+    // Then update every second
     const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)
-  }, [targetDate])
+  }, []) // Empty dependency array means this runs once on mount
 
   return (
     <div className="flex flex-wrap justify-center gap-4">
@@ -57,4 +60,3 @@ export function Countdown({ targetDate }: CountdownProps) {
     </div>
   )
 }
-

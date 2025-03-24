@@ -13,7 +13,11 @@ export function FooterSection() {
           Register now and start your journey to innovation, recognition, and amazing prizes!
         </p>
 
-        <Button size="lg" className="bg-white text-black hover:bg-gray-200">
+        <Button
+          size="lg"
+          className="bg-white text-black hover:bg-gray-200"
+          onClick={() => window.location.href = "https://forms.gle/KYbH9d4HLgBaEbGz5"}
+        >
           Register for Ease the Error <Rocket className="ml-2 h-4 w-4" />
         </Button>
 
