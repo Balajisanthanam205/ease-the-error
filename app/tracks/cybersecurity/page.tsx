@@ -200,9 +200,9 @@ export default function CybersecurityTrackPage() {
     <div className="bg-gray-900 shadow-lg rounded-2xl p-8 border border-gray-800">
       {/* Introduction */}
       <p className="text-lg text-gray-300 leading-relaxed">
-        The **Cybersecurity & Privacy track**, presented by **Rootecstak**, challenges participants to develop **innovative solutions** 
-        that protect data, systems, and individual privacy in our increasingly connected world. From **AI-powered safety apps** to 
-        **passwordless authentication**, from **phishing detection** to **anti-piracy systems**, this track offers a wide range of 
+        The Cybersecurity & Privacy track, presented by Rootecstak, challenges participants to develop innovative solutions 
+        that protect data, systems, and individual privacy in our increasingly connected world. From AI-powered safety apps to 
+        passwordless authentication, from phishing detection to anti-piracy systems, this track offers a wide range of 
         problem statements to tackle.
       </p>
 
@@ -211,19 +211,19 @@ export default function CybersecurityTrackPage() {
         <h3 className="text-2xl font-semibold text-white mb-4">🔍 What We're Looking For</h3>
         <ul className="space-y-3 text-gray-300 text-lg">
           <li className="flex items-center">
-            ✅ <span className="ml-2">Address significant security or privacy challenges with **innovative approaches**</span>
+            ✅ <span className="ml-2">Address significant security or privacy challenges with innovative approaches</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Balance strong **protection with usability and practicality**</span>
+            ✅ <span className="ml-2">Balance strong protection with usability and practicality</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Consider the **full threat landscape** and potential attack vectors</span>
+            ✅ <span className="ml-2">Consider the full threat landscape and potential attack vectors</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Implement **security & privacy by design** principles</span>
+            ✅ <span className="ml-2">Implement security & privacy by design principles</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Demonstrate **scalability and adaptability** to evolving threats</span>
+            ✅ <span className="ml-2">Demonstrate scalability and adaptability to evolving threats</span>
           </li>
         </ul>
       </div>
@@ -251,22 +251,22 @@ export default function CybersecurityTrackPage() {
         <h3 className="text-2xl font-semibold text-white mb-4">📑 Submission Requirements</h3>
         <ul className="space-y-3 text-gray-300 text-lg">
           <li className="flex items-center">
-            ✅ <span className="ml-2">A **working prototype or demo**</span>
+            ✅ <span className="ml-2">A working prototype or demo</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Source code repository with **documentation**</span>
+            ✅ <span className="ml-2">Source code repository with documentation</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">A **presentation explaining approach & results**</span>
+            ✅ <span className="ml-2">A presentation explaining approach & results</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Description of the **security/privacy problem** being solved and its significance</span>
+            ✅ <span className="ml-2">Description of the security/privacy problem being solved and its significance</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Explanation of the **security/privacy techniques** employed</span>
+            ✅ <span className="ml-2">Explanation of the security/privacy techniques employed</span>
           </li>
           <li className="flex items-center">
-            ✅ <span className="ml-2">Discussion of **potential vulnerabilities & future improvements**</span>
+            ✅ <span className="ml-2">Discussion of potential vulnerabilities & future improvements</span>
           </li>
         </ul>
       </div>
@@ -275,7 +275,7 @@ export default function CybersecurityTrackPage() {
       <div className="bg-gradient-to-r from-red-700 to-orange-700 p-6 mt-12 rounded-xl text-center shadow-lg">
         <h3 className="text-xl font-bold text-white mb-3">📢 Ready to Get Started?</h3>
         <p className="text-gray-200 mb-4">
-          Browse the problem statements provided by **Rootecstak**, gather your team, and start building your cybersecurity solution!
+          Browse the problem statements provided by Rootecstak, gather your team, and start building your cybersecurity solution!
         </p>
         <Button
           className="px-6 py-3 text-lg font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 rounded-lg"
