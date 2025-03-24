@@ -115,6 +115,7 @@ export function NavigationBar({ sections, scrollToSection }: NavigationBarProps)
             <Button
               size="sm"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white ml-4"
+              onClick={() => window.location.href = "https://forms.gle/KYbH9d4HLgBaEbGz5"}
             >
               Register <Rocket className="ml-2 h-3 w-3" />
             </Button>

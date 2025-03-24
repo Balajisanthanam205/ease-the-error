@@ -40,9 +40,11 @@ export function HeroSection({ hackathonDate, scrollToSection }: HeroSectionProps
 
             {/* First Row - Register & Learn More */}
             <div className="flex flex-wrap justify-center gap-4 mt-8" data-parallax="0.25">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-200">
-                Register Now <Rocket className="ml-2 h-4 w-4" />
-              </Button>
+                <a href="https://forms.gle/KYbH9d4HLgBaEbGz5" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200">
+                  Register Now <Rocket className="ml-2 h-4 w-4" />
+                </Button>
+                </a>
 
               <Button
                 variant="outline"

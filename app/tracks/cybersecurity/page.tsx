@@ -7,6 +7,7 @@ import { ParticleBackground } from "@/components/particle-background"
 import { Shield, ArrowLeft, Download, ExternalLink, Bookmark } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import root from "@/public/rootecstak.png"
 
 export default function CybersecurityTrackPage() {
   const [activeTab, setActiveTab] = useState("overview")
@@ -14,77 +15,77 @@ export default function CybersecurityTrackPage() {
   const problems = [
     {
       id: 1,
-      title: "Privacy-Preserving Data Sharing Platform",
+      title: "Women Safety App: AI-Powered Emergency Alert System",
       description:
-        "Build a platform that enables organizations to share and analyze sensitive data while preserving privacy and confidentiality.",
+        "Develop an AI-driven safety app that automatically detects danger using smartphone sensors and triggers SOS alerts with real-time location.",
       difficulty: "Hard",
-      tags: ["Privacy", "Data Sharing", "Encryption"],
+      tags: ["Computer Vision", "NLP", "Cybersecurity", "AI"],
       details:
-        "Create a solution that allows multiple organizations to collaborate on data analysis without revealing their raw data to each other. The platform should implement privacy-preserving techniques such as federated learning, homomorphic encryption, secure multi-party computation, or differential privacy. Focus on making these complex privacy technologies accessible through intuitive interfaces and workflows.",
+        "Create a smart safety application that can autonomously detect emergencies (like screams, sudden falls, or aggressive movements) through smartphone sensors (audio, video, motion). The app should trigger SOS alerts to predefined contacts and authorities with real-time location data, even if the user cannot interact with the device. The solution should include computer vision for scene analysis, NLP for voice recognition of distress keywords, and robust cybersecurity measures to protect user data and ensure privacy.",
       resources: [
-        { name: "Privacy-Preserving Computation Guide", url: "#" },
-        { name: "Synthetic Test Datasets", url: "#" },
-        { name: "Federated Learning Framework", url: "#" },
+        { name: "Audio Analysis Framework", url: "#" },
+        { name: "Emergency Response Protocols", url: "#" },
+        { name: "Privacy Protection Guidelines", url: "#" },
       ],
     },
     {
       id: 2,
-      title: "Secure IoT Device Management System",
+      title: "Cybercrime Reporting AI Assistant",
       description:
-        "Develop a system for securely managing, monitoring, and updating IoT devices across distributed environments.",
+        "Build an AI assistant that simplifies cybercrime reporting by guiding victims through evidence collection and generating structured reports.",
       difficulty: "Medium",
-      tags: ["IoT Security", "Device Management", "Firmware"],
+      tags: ["NLP", "Cybersecurity", "Conversational AI"],
       details:
-        "Build a solution that addresses the security challenges of IoT deployments by providing secure device provisioning, authentication, monitoring, and over-the-air updates. The system should detect vulnerable or compromised devices, enforce security policies, and enable secure communication between devices and cloud services. Consider resource constraints of IoT devices and the need for scalability across thousands of devices.",
+        "Develop an AI-powered assistant that helps victims of cybercrimes (phishing, hacking, harassment) through the reporting process. The system should guide users in collecting proper evidence, generate structured reports for law enforcement, and provide real-time protective measures. The assistant should use natural language processing for intuitive interaction and maintain strict cybersecurity protocols for handling sensitive user data. The solution should also educate users about preventive measures and their legal rights.",
       resources: [
-        { name: "IoT Security Best Practices", url: "#" },
-        { name: "Secure Device Management Protocols", url: "#" },
-        { name: "IoT Vulnerability Database", url: "#" },
+        { name: "Cybercrime Reporting Standards", url: "#" },
+        { name: "Conversational AI Framework", url: "#" },
+        { name: "Evidence Collection Guidelines", url: "#" },
       ],
     },
     {
       id: 3,
-      title: "Phishing Detection and Training Platform",
+      title: "Passwordless Authentication System",
       description:
-        "Create a platform that combines AI-powered phishing detection with personalized security awareness training.",
+        "Create a corporate-friendly authentication system that replaces passwords with biometrics or hardware tokens to eliminate phishing risks.",
       difficulty: "Medium",
-      tags: ["Phishing", "Security Awareness", "Training"],
+      tags: ["Cybersecurity", "Biometrics", "FIDO2"],
       details:
-        "Develop a solution that helps organizations combat phishing attacks through a combination of detection technology and human training. The platform should use AI to identify potential phishing attempts across email, messaging, and web browsing, while also providing personalized training based on users' behavior and vulnerability patterns. Include features for simulated phishing campaigns and measuring improvement over time.",
+        "Design and implement a passwordless authentication system suitable for corporate environments that replaces traditional passwords with more secure alternatives like biometrics (face/fingerprint recognition), hardware tokens, or magic links. The system should integrate with existing infrastructure and follow FIDO2/WebAuthn protocols. Special attention should be given to preventing spoofing attacks through liveness detection and other anti-fraud measures. The solution should significantly reduce phishing risks while improving user experience and reducing IT support costs related to password resets.",
       resources: [
-        { name: "Phishing Dataset", url: "#" },
-        { name: "Security Awareness Training Framework", url: "#" },
-        { name: "Behavioral Analysis Guidelines", url: "#" },
+        { name: "FIDO2 Implementation Guide", url: "#" },
+        { name: "Biometric Security Standards", url: "#" },
+        { name: "Enterprise Authentication Framework", url: "#" },
       ],
     },
     {
       id: 4,
-      title: "Zero-Trust Access Control System",
+      title: "AI-Powered Phishing Detection Tool",
       description:
-        "Build a zero-trust security system that provides fine-grained access control based on continuous verification.",
+        "Design a tool that scans emails/URLs in real-time, flags phishing attempts using ML, and educates users with explainable alerts.",
       difficulty: "Hard",
-      tags: ["Zero Trust", "Access Control", "Authentication"],
+      tags: ["NLP", "Computer Vision", "Cybersecurity"],
       details:
-        "Create a solution that implements the zero-trust security model, where trust is never assumed and verification is required from everyone trying to access resources. The system should provide continuous authentication and authorization based on user identity, device health, behavior patterns, and context. Include features for policy management, anomaly detection, and integration with existing identity providers.",
+        "Build an advanced phishing detection system that scans emails and URLs in real-time using machine learning algorithms. The tool should identify phishing attempts by analyzing various indicators like fake domains, suspicious language patterns, malicious attachments, and logo spoofing. The solution should integrate seamlessly with email clients and browsers, providing clear, explainable alerts that not only warn users but also educate them about the specific phishing techniques being used. The system should continuously learn from new threats and update its detection models accordingly.",
       resources: [
-        { name: "Zero Trust Architecture Guide", url: "#" },
-        { name: "Continuous Authentication Framework", url: "#" },
-        { name: "Policy Enforcement Documentation", url: "#" },
+        { name: "Phishing Dataset Repository", url: "#" },
+        { name: "ML Model Training Framework", url: "#" },
+        { name: "Threat Intelligence API", url: "#" },
       ],
     },
     {
       id: 5,
-      title: "Privacy-Focused Personal Data Dashboard",
+      title: "Online Anti-Piracy Tracker",
       description:
-        "Develop a dashboard that helps individuals understand and control how their personal data is collected and used online.",
+        "Develop a crawler that identifies piracy sites hosting illegal content and disrupts their revenue by blocking ads.",
       difficulty: "Medium",
-      tags: ["Personal Privacy", "Data Control", "Transparency"],
+      tags: ["Computer Vision", "NLP", "Cybersecurity"],
       details:
-        "Build a solution that empowers individuals to take control of their digital privacy by providing visibility into data collection practices and tools for managing consent and data sharing. The dashboard should aggregate information about data collected across services, highlight privacy risks, automate privacy-enhancing actions, and provide educational resources. Focus on making complex privacy concepts accessible to non-technical users.",
+        "Create an automated system that crawls the web to identify piracy sites hosting illegal movies, music, and other copyrighted content. The solution should dynamically update a blacklist (IWL) of these sites and work with ad-platform APIs to block their revenue streams. The system should use computer vision for watermark and copyright detection, NLP for content similarity analysis, and cybersecurity techniques for IP/DNS monitoring. The goal is to financially disrupt pirate sites by cutting off their ad revenue, thereby reducing their operational capacity and the overall prevalence of online piracy.",
       resources: [
-        { name: "Privacy Regulations Overview", url: "#" },
-        { name: "Data Collection Tracking Methods", url: "#" },
-        { name: "Privacy UX Research", url: "#" },
+        { name: "Copyright Detection Algorithms", url: "#" },
+        { name: "Web Crawling Framework", url: "#" },
+        { name: "Ad Platform API Documentation", url: "#" },
       ],
     },
   ]
@@ -137,23 +138,23 @@ export default function CybersecurityTrackPage() {
               <h1 className="text-4xl md:text-5xl font-bold">Cybersecurity & Privacy Track</h1>
             </div>
 
+            <div className="flex items-center mb-4">
+              <span className="text-gray-300 mr-2">Presented by</span>
+              <div className="relative h-10 w-32">
+                <Image 
+                  src={root} // Replace with your actual logo path
+                  alt="Rootecstak"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
             <p className="text-xl text-gray-300 mb-8">
               Develop innovative solutions to protect data, systems, and privacy in an increasingly connected world.
               This track challenges you to create tools and technologies that address critical security and privacy
               challenges across various domains.
             </p>
-
-             {/*<div className="flex flex-wrap gap-4 mb-8">
-              <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
-                <span className="text-red-400 font-medium">Difficulty:</span> Intermediate to Advanced
-              </div>
-              <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
-                <span className="text-red-400 font-medium">Prize Pool:</span> $3,000
-              </div>
-              <div className="bg-gray-900 px-4 py-2 rounded-full text-sm">
-                <span className="text-red-400 font-medium">Team Size:</span> 1-4 members
-              </div>
-            </div>*/}
           </div>
         </div>
       </section>
@@ -194,10 +195,9 @@ export default function CybersecurityTrackPage() {
 
               <div className="prose prose-lg prose-invert max-w-none">
                 <p>
-                  The Cybersecurity & Privacy track challenges participants to develop innovative solutions that protect
-                  data, systems, and individual privacy in our increasingly connected world. From privacy-preserving
-                  technologies to secure IoT systems, from phishing detection to zero-trust architectures, this track
-                  offers a wide range of problem statements to tackle.
+                  The Cybersecurity & Privacy track, presented by Rootecstak, challenges participants to develop innovative solutions that protect
+                  data, systems, and individual privacy in our increasingly connected world. From AI-powered safety apps to passwordless authentication,
+                  from phishing detection to anti-piracy systems, this track offers a wide range of problem statements to tackle.
                 </p>
 
                 <h3>What We're Looking For</h3>
@@ -221,11 +221,11 @@ export default function CybersecurityTrackPage() {
                 </p>
 
                 <ul>
-                  <li>Encryption and cryptographic protocols</li>
-                  <li>Privacy-preserving computation techniques</li>
-                  <li>Authentication and access control systems</li>
-                  <li>Threat detection and prevention technologies</li>
+                  <li>AI and Machine Learning for threat detection</li>
+                  <li>Biometric authentication systems</li>
                   <li>Secure communication protocols</li>
+                  <li>Computer vision for content analysis</li>
+                  <li>Natural Language Processing for text analysis</li>
                 </ul>
 
                 <h3>Submission Requirements</h3>
@@ -243,7 +243,7 @@ export default function CybersecurityTrackPage() {
                 <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
                   <h3 className="text-xl font-bold mb-4">Ready to get started?</h3>
                   <p className="mb-4">
-                    Browse the problem statements, gather your team, and start building your cybersecurity solution!
+                    Browse the problem statements provided by Rootecstak, gather your team, and start building your cybersecurity solution!
                   </p>
                   <Button
                     className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700"
@@ -261,7 +261,7 @@ export default function CybersecurityTrackPage() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6">Problem Statements</h2>
               <p className="text-gray-400 mb-8">
-                Choose from the following problem statements or propose your own idea within the Cybersecurity & Privacy
+                Choose from the following problem statements provided by Rootecstak or propose your own idea within the Cybersecurity & Privacy
                 domain.
               </p>
 
@@ -271,7 +271,7 @@ export default function CybersecurityTrackPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold">{problem.title}</h3>
-                         {/*<div
+                        {/* <div
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
                             problem.difficulty === "Hard"
                               ? "bg-red-900/30 text-red-400"
@@ -281,7 +281,7 @@ export default function CybersecurityTrackPage() {
                           }`}
                         >
                           {problem.difficulty}
-                        </div>*/}
+                        </div> */}
                       </div>
                       
                       <h4 className="text-lg font-medium mb-2">Problem Statement:</h4>
@@ -300,7 +300,7 @@ export default function CybersecurityTrackPage() {
                         <p className="text-gray-400">{problem.details}</p>
                       </div>
 
-                     {/*  <div className="mt-6">
+                      {/* <div className="mt-6">
                         <h4 className="text-lg font-medium mb-2">Resources</h4>
                         <ul className="space-y-2">
                           {problem.resources.map((resource, index) => (
@@ -312,9 +312,9 @@ export default function CybersecurityTrackPage() {
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </div> */}
 
-                      <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
+                      {/* <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-800">
                         <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800">
                           <Download className="h-4 w-4 mr-2" />
                           Download Details
@@ -323,13 +323,13 @@ export default function CybersecurityTrackPage() {
                           <Bookmark className="h-4 w-4 mr-2" />
                           Save Problem
                         </Button>
-                      </div>*/}
+                      </div> */}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
+              {/* <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
                 <h3 className="text-xl font-bold mb-4">Have Your Own Idea?</h3>
                 <p className="mb-4">
                   If you have an innovative cybersecurity project idea that doesn't fit the problem statements above,
@@ -338,20 +338,20 @@ export default function CybersecurityTrackPage() {
                 <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
                   Submit Custom Proposal
                 </Button>
-              </div>
+              </div> */}
             </div>
           )}
 
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
-              {/*<p className="text-gray-400 mb-8">
+              <h2 className="text-3xl font-bold mb-6">Mentors</h2>
+              <p className="text-gray-400 mb-8">
                 Our Cybersecurity & Privacy track mentors are industry experts and researchers who will provide guidance
                 and support throughout the hackathon.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {mentors.map((mentor, index) => (
                   <div
                     key={index}
@@ -400,7 +400,7 @@ export default function CybersecurityTrackPage() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
                 <h3 className="text-xl font-bold mb-4">Need Help?</h3>
@@ -408,17 +408,14 @@ export default function CybersecurityTrackPage() {
                   Our mentors are available throughout the hackathon to provide guidance and support. Don't hesitate to
                   reach out!
                 </p>
-                <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
+                {/* <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
                   Schedule Mentor Session
-                </Button>
-              </div>*/}
+                </Button> */}
+              </div>
             </div>
           )}
-
-
         </div>
       </section>
     </div>
   )
 }
-

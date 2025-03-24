@@ -1,4 +1,4 @@
-// File: C:\Users\ADMIN\ease-the-error-4\app\tracks\cybersecurity\page.tsx
+// File: D:\ease-the-error\app\tracks\cybersecurity\page.tsx
 import * as entry from '../../../../../app/tracks/cybersecurity/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

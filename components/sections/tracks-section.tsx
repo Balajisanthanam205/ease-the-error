@@ -207,7 +207,7 @@ export const TracksSection = forwardRef<HTMLDivElement, TracksSectionProps>(func
         Cybersecurity & Privacy
       </h3>
       <p className="text-gray-400 mb-4">
-        Develop solutions that enhance digital security, protect privacy, or address emerging cybersecurity challenges.
+      Develop cutting-edge solutions to combat cyber threats, safeguard user privacy, and address evolving security challenges—from AI-driven threat detection to zero-trust authentication systems.
       </p>
       <ul className="space-y-2 text-gray-400 list-disc pl-5 mb-4">
         <li>Threat detection and prevention systems</li>
