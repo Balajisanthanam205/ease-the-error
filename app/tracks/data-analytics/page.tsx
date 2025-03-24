@@ -190,72 +190,103 @@ export default function DataAnalyticsTrackPage() {
         <div className="container mx-auto px-4">
           {/* Overview Tab */}
           {activeTab === "overview" && (
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Overview</h2>
+  <div className="max-w-5xl mx-auto px-6 py-12">
+    {/* Section Title */}
+    <h2 className="text-4xl font-extrabold text-white text-center mb-8">
+      📊 Data Analytics & Visualization Track
+    </h2>
 
-              <div className="prose prose-lg prose-invert max-w-none">
-                <p>
-                  The Data Analytics & Visualization track challenges participants to develop innovative solutions that
-                  transform raw data into meaningful insights and compelling visualizations. From interactive dashboards
-                  to predictive analytics tools, from anomaly detection systems to data storytelling platforms, this
-                  track offers a wide range of problem statements to tackle.
-                </p>
+    <div className="bg-gray-900 shadow-lg rounded-2xl p-8 border border-gray-800">
+      {/* Introduction */}
+      <p className="text-lg text-gray-300 leading-relaxed">
+        The Data Analytics & Visualization track challenges participants to develop innovative solutions that transform 
+        raw data into meaningful insights and compelling visualizations. From interactive dashboards to predictive 
+        analytics tools, this track offers a wide range of problem statements to tackle.
+      </p>
 
-                <h3>What We're Looking For</h3>
-                <p>
-                  We're seeking solutions that demonstrate not only technical excellence but also thoughtful application
-                  of data analytics and visualization principles to create meaningful impact. Successful projects will:
-                </p>
+      {/* What We're Looking For */}
+      <div className="mt-8">
+        <h3 className="text-2xl font-semibold text-white mb-4">🔍 What We're Looking For</h3>
+        <ul className="space-y-3 text-gray-300 text-lg">
+          <li className="flex items-center">
+            📌 <span className="ml-2">Transform complex data into clear, intuitive visualizations</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Enable data-driven decision-making for diverse users</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Apply analytical techniques to extract meaningful insights</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Ensure user experience & accessibility in design</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Demonstrate scalability & performance with large datasets</span>
+          </li>
+        </ul>
+      </div>
 
-                <ul>
-                  <li>Transform complex data into clear, intuitive visualizations</li>
-                  <li>Enable data-driven decision making for diverse users</li>
-                  <li>Apply appropriate analytical techniques to extract meaningful insights</li>
-                  <li>Consider user experience and accessibility in design</li>
-                  <li>Demonstrate scalability and performance with larger datasets</li>
-                </ul>
-
-                <h3>Technologies</h3>
-                <p>
-                  Participants are encouraged to use any data analytics and visualization tools they prefer. Some
-                  popular options include:
-                </p>
-
-                <ul>
-                  <li>Python with libraries like Pandas, NumPy, Matplotlib, Seaborn</li>
-                  <li>JavaScript visualization libraries like D3.js, Chart.js, or Plotly</li>
-                  <li>Business intelligence tools like Tableau, Power BI (with custom extensions)</li>
-                  <li>Big data processing frameworks like Spark or Dask</li>
-                  <li>Machine learning libraries for predictive analytics</li>
-                </ul>
-
-                <h3>Submission Requirements</h3>
-                <p>All submissions must include:</p>
-
-                <ul>
-                  <li>Working prototype or demo of your solution</li>
-                  <li>Source code repository with documentation</li>
-                  <li>Brief presentation explaining your approach and results</li>
-                  <li>Description of the problem being solved and its significance</li>
-                  <li>Explanation of the analytical techniques and visualization choices</li>
-                  <li>Discussion of limitations and future improvements</li>
-                </ul>
-
-                <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
-                  <h3 className="text-xl font-bold mb-4">Ready to get started?</h3>
-                  <p className="mb-4">
-                    Browse the problem statements, gather your team, and start building your data analytics solution!
-                  </p>
-                  <Button
-                    className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700"
-                    onClick={() => setActiveTab("problems")}
-                  >
-                    View Problem Statements
-                  </Button>
-                </div>
-              </div>
+      {/* Technologies Section */}
+      <div className="mt-10">
+        <h3 className="text-2xl font-semibold text-white mb-4">🛠️ Technologies</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
+          {[
+            "Python (Pandas, NumPy, Seaborn)",
+            "Matplotlib & Plotly",
+            "D3.js, Chart.js, Power BI",
+            "Tableau & Business Intelligence",
+            "Spark & Dask (Big Data)",
+            "Machine Learning for Analytics",
+          ].map((tech, index) => (
+            <div key={index} className="bg-gray-800 p-3 rounded-lg text-center text-sm font-medium">
+              {tech}
             </div>
-          )}
+          ))}
+        </div>
+      </div>
+
+      {/* Submission Requirements */}
+      <div className="mt-10">
+        <h3 className="text-2xl font-semibold text-white mb-4">📑 Submission Requirements</h3>
+        <ul className="space-y-3 text-gray-300 text-lg">
+          <li className="flex items-center">
+            ✅ <span className="ml-2">A working prototype or demo</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Source code repository with documentation</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">A presentation explaining approach & results</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Description of the problem & significance</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Explanation of analytical techniques used</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Discussion of limitations & future improvements</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-green-700 to-teal-700 p-6 mt-12 rounded-xl text-center shadow-lg">
+        <h3 className="text-xl font-bold text-white mb-3">📢 Ready to Get Started?</h3>
+        <p className="text-gray-200 mb-4">
+          Browse the problem statements, gather your team, and start building your data analytics solution!
+        </p>
+        <Button
+          className="px-6 py-3 text-lg font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 rounded-lg"
+          onClick={() => setActiveTab("problems")}
+        >
+          View Problem Statements
+        </Button>
+      </div>
+    </div>
+  </div>
+)}
+
 
           {/* Problem Statements Tab */}
           {activeTab === "problems" && (
