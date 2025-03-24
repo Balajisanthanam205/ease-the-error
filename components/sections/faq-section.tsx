@@ -23,7 +23,7 @@ export const FAQSection = forwardRef<HTMLDivElement, FAQSectionProps>(function F
   const faqItems: FAQItem[] = [
     {
       q: "Who can participate?",
-      a: "Any university student can participate. International students participate online, while Indian students must attend offline.",
+      a: "Any university student from india can participate.",
       category: "Eligibility",
     },
     {
@@ -33,7 +33,7 @@ export const FAQSection = forwardRef<HTMLDivElement, FAQSectionProps>(function F
     },
     {
       q: "Is there a registration fee?",
-      a: "Yes, each team has a registration fee of ₹450.",
+      a: "Yes, each team has a registration fee of ₹400.",
       category: "Registration",
     },
     {
