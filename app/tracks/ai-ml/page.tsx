@@ -189,72 +189,95 @@ export default function AIMLTrackPage() {
         <div className="container mx-auto px-4">
           {/* Overview Tab */}
           {activeTab === "overview" && (
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Track Overview</h2>
+  <div className="max-w-5xl mx-auto px-6 py-12">
+    {/* Section Title */}
+    <h2 className="text-4xl font-extrabold text-white text-center mb-8">
+      🚀 AI & Machine Learning Track Overview
+    </h2>
 
-              <div className="prose prose-lg prose-invert max-w-none">
-                <p>
-                  The AI & Machine Learning track challenges participants to develop innovative solutions that leverage
-                  artificial intelligence, machine learning, and data science to solve real-world problems. From
-                  healthcare diagnostics to sustainable agriculture, from personalized education to ethical AI systems,
-                  this track offers a wide range of problem statements to tackle.
-                </p>
+    <div className="bg-gray-900 shadow-lg rounded-2xl p-8 border border-gray-800">
+      {/* Introduction */}
+      <p className="text-lg text-gray-300 leading-relaxed">
+        The AI & Machine Learning track challenges participants to develop innovative solutions that leverage AI, ML,
+        and data science to solve real-world problems. From healthcare diagnostics to sustainable agriculture, this
+        track offers a wide range of problem statements to tackle.
+      </p>
 
-                <h3>What We're Looking For</h3>
-                <p>
-                  We're seeking solutions that demonstrate not only technical excellence but also thoughtful application
-                  of AI technologies to create meaningful impact. Successful projects will:
-                </p>
+      {/* What We're Looking For */}
+      <div className="mt-8">
+        <h3 className="text-2xl font-semibold text-white mb-4">🔍 What We're Looking For</h3>
+        <ul className="space-y-3 text-gray-300 text-lg">
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Innovative applications of AI/ML techniques</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Solutions addressing real-world challenges</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">Ethical considerations & bias mitigation</span>
+          </li>
+          <li className="flex items-center">
+            ✅ <span className="ml-2">User-friendly & scalable implementations</span>
+          </li>
+        </ul>
+      </div>
 
-                <ul>
-                  <li>Demonstrate innovative applications of AI/ML techniques</li>
-                  <li>Address real-world problems with practical solutions</li>
-                  <li>Consider ethical implications and potential biases</li>
-                  <li>Balance technical sophistication with usability</li>
-                  <li>Show potential for scalability and real-world deployment</li>
-                </ul>
-
-                <h3>Technologies</h3>
-                <p>
-                  Participants are encouraged to use any AI/ML frameworks and tools they prefer. Some popular options
-                  include:
-                </p>
-
-                <ul>
-                  <li>TensorFlow, PyTorch, scikit-learn, Keras</li>
-                  <li>Hugging Face Transformers for NLP tasks</li>
-                  <li>Computer vision libraries like OpenCV</li>
-                  <li>Cloud AI services (with appropriate attribution)</li>
-                  <li>Data visualization tools like Matplotlib, Plotly, or D3.js</li>
-                </ul>
-
-                <h3>Submission Requirements</h3>
-                <p>All submissions must include:</p>
-
-                <ul>
-                  <li>Working prototype or demo of your solution</li>
-                  <li>Source code repository with documentation</li>
-                  <li>Brief presentation explaining your approach and results</li>
-                  <li>Description of the problem being solved and its significance</li>
-                  <li>Explanation of the AI/ML techniques employed</li>
-                  <li>Discussion of limitations and future improvements</li>
-                </ul>
-
-                <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
-                  <h3 className="text-xl font-bold mb-4">Ready to get started?</h3>
-                  <p className="mb-4">
-                    Browse the problem statements, gather your team, and start building your AI solution!
-                  </p>
-                  <Button
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                    onClick={() => setActiveTab("problems")}
-                  >
-                    View Problem Statements
-                  </Button>
-                </div>
-              </div>
+      {/* Technologies Section */}
+      <div className="mt-10">
+        <h3 className="text-2xl font-semibold text-white mb-4">🛠️ Technologies</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
+          {[
+            "TensorFlow & PyTorch",
+            "Hugging Face Transformers",
+            "OpenCV for Computer Vision",
+            "Scikit-learn & Keras",
+            "Cloud AI Services",
+            "Matplotlib & D3.js",
+          ].map((tech, index) => (
+            <div key={index} className="bg-gray-800 p-3 rounded-lg text-center text-sm font-medium">
+              {tech}
             </div>
-          )}
+          ))}
+        </div>
+      </div>
+
+      {/* Submission Requirements */}
+      <div className="mt-10">
+        <h3 className="text-2xl font-semibold text-white mb-4">📑 Submission Requirements</h3>
+        <ul className="space-y-3 text-gray-300 text-lg">
+          <li className="flex items-center">
+            📌 <span className="ml-2">A working prototype/demo</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Source code repository with documentation</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">A presentation outlining your approach & results</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Clear problem statement & its significance</span>
+          </li>
+          <li className="flex items-center">
+            📌 <span className="ml-2">Description of AI/ML techniques used</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-purple-700 to-blue-700 p-6 mt-12 rounded-xl text-center shadow-lg">
+        <h3 className="text-xl font-bold text-white mb-3">🚀 Ready to Get Started?</h3>
+        <p className="text-gray-200 mb-4">Browse the problem statements, gather your team, and start building your AI solution!</p>
+        <Button
+          className="px-6 py-3 text-lg font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 rounded-lg"
+          onClick={() => setActiveTab("problems")}
+        >
+          View Problem Statements
+        </Button>
+      </div>
+    </div>
+  </div>
+)}
+
 
           {/* Problem Statements Tab */}
           {activeTab === "problems" && (
