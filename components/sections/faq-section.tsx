@@ -33,7 +33,7 @@ export const FAQSection = forwardRef<HTMLDivElement, FAQSectionProps>(function F
     },
     {
       q: "Is there a registration fee?",
-      a: "Yes, each team has a registration fee of ₹400.",
+      a: "Yes,₹400 per person.",
       category: "Registration",
     },
     {
