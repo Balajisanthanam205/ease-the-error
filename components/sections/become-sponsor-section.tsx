@@ -75,18 +75,24 @@ export const BecomeSponsorSection = forwardRef<HTMLDivElement, BecomeSponsorSect
         </div>
 
         <div className="text-center">
-          <Link href="/sponsor">
-          {/*downlode button*/} 
-          <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-          >
-         <a href="/FODSE Brochure.pdf" download className="flex items-center">
-         Become a Sponsor <Rocket className="ml-2 h-4 w-4" />
-         </a>
-        </Button>
+{/* Download Brochure Button */}
+<div className="w-full flex justify-center mt-4">
+  <a
+    href="/FODSE Brochure.pdf"
+    download="FODSE_Brochure.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      size="lg"
+      className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg shadow-md flex items-center gap-2"
+    >
+      <Download className="h-5 w-5" />
+      Download Brochure
+    </Button>
+  </a>
+</div>
 
-          </Link>
           <div className="mt-8">
             <Button
               variant="outline"
