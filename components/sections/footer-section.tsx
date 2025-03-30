@@ -58,15 +58,17 @@ export function FooterSection() {
                 href="https://www.linkedin.com/in/the-forum-of-data-science-engineers-b37716291/"
                 className="text-gray-400 hover:text-white transition-colors"
               >*/} 
+              <div className="text-gray-400 hover:text-white transition-colors">
                 Divya Prakash - +91 98409 65005,
+              </div>
               {/*</div></Link>*/}
               {/*<Link
                 href="https://www.instagram.com/fodse_svce/"
                 className="text-gray-400 hover:text-white transition-colors"
               >*/} 
-
-
+              <div className="text-gray-400 hover:text-white transition-colors">
                 Pavithraa Jawahar - +91 72000 97918.
+              </div>
               {/*</Link>*/} 
             </div>
           </div>
