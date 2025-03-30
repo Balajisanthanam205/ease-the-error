@@ -53,12 +53,21 @@ export function FooterSection() {
 
           <div>
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 text-gray-400 hover:text-white transition-colors">
+             {/* <Link
+                href="https://www.linkedin.com/in/the-forum-of-data-science-engineers-b37716291/"
+                className="text-gray-400 hover:text-white transition-colors"
+              >*/} 
+                Divya Prakash - +91 98409 65005,
+              {/*</div></Link>*/}
+              {/*<Link
+                href="https://www.instagram.com/fodse_svce/"
+                className="text-gray-400 hover:text-white transition-colors"
+              >*/} 
 
-            Divya Prakash - +91 98409 65005,
 
-            Pavithraa Jawahar - 72000 97918.
-            
+                Pavithraa Jawahar - +91 72000 97918.
+              {/*</Link>*/} 
             </div>
           </div>
 
