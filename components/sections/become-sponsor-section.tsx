@@ -2,7 +2,7 @@
 
 import { forwardRef } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Rocket, Users, Award, Building } from "lucide-react"
+import { ChevronDown, Rocket, Users, Award, Building, Download  } from "lucide-react"
 import Link from "next/link"
 
 interface BecomeSponsorSectionProps {
