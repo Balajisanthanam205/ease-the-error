@@ -52,9 +52,20 @@ export function FooterSection() {
           </div>
 
           <div>
+            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+
+            Divya Prakash - +91 98409 65005,
+
+            Pavithraa Jawahar - 72000 97918.
+            
+            </div>
+          </div>
+
+          <div>
             <h3 className="text-lg font-bold mb-4">Resources</h3>
             <div className="space-y-2">
-              <Link href="#" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="#faq" className="block text-gray-400 hover:text-white transition-colors">
                 FAQ
               </Link>
               <Link href="#" className="block text-gray-400 hover:text-white transition-colors">
