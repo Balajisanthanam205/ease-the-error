@@ -60,7 +60,7 @@ export function FooterSection() {
               >*/} 
               <div className="text-gray-400 hover:text-white transition-colors">
                 Divya Prakash - +91 98409 65005,
-              </div><br></br>
+              </div> <br></br>
               {/*</div></Link>*/}
               {/*<Link
                 href="https://www.instagram.com/fodse_svce/"
