@@ -377,13 +377,13 @@ export default function CybersecurityTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Mentors</h2>
+             <h2 className="text-3xl font-bold mb-6">Mentors</h2>
               <p className="text-gray-400 mb-8">
                 Our Cybersecurity & Privacy track mentors are industry experts and researchers who will provide guidance
                 and support throughout the hackathon.
               </p>
 
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {mentors.map((mentor, index) => (
                   <div
                     key={index}
@@ -432,7 +432,7 @@ export default function CybersecurityTrackPage() {
                     </div>
                   </div>
                 ))}
-              </div> */}
+              </div> 
 
               <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
                 <h3 className="text-xl font-bold mb-4">Need Help?</h3>

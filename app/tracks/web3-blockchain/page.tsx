@@ -367,8 +367,8 @@ export default function Web3BlockchainTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
-              {/*<p className="text-gray-400 mb-8">
+             {/* <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>*/}
+              <p className="text-gray-400 mb-8">
                 Our Web3 & Blockchain track mentors are industry experts and researchers who will provide guidance and
                 support throughout the hackathon.
               </p>
@@ -433,7 +433,7 @@ export default function Web3BlockchainTrackPage() {
                 <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                   Schedule Mentor Session
                 </Button>
-              </div>*/}
+              </div>
             </div>
           )}
         </div>

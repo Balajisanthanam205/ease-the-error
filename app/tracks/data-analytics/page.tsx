@@ -367,8 +367,8 @@ export default function DataAnalyticsTrackPage() {
           {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
-              {/*<p className="text-gray-400 mb-8">
+              {/*<h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>*/}
+              <p className="text-gray-400 mb-8">
                 Our Data Analytics & Visualization track mentors are industry experts and researchers who will provide
                 guidance and support throughout the hackathon.
               </p>
@@ -433,7 +433,7 @@ export default function DataAnalyticsTrackPage() {
                 <Button className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700">
                   Schedule Mentor Session
                 </Button>
-              </div>*/}
+              </div>
             </div>
           )}
         </div>
