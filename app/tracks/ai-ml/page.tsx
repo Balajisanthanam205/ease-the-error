@@ -358,8 +358,8 @@ export default function AIMLTrackPage() {
          {/* Mentors Tab */}
           {activeTab === "mentors" && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>
-              {/*<p className="text-gray-400 mb-8">
+            {/*<h2 className="text-3xl font-bold mb-6">COMING SOON......!!!</h2>*/}
+              <p className="text-gray-400 mb-8">
                 Our Cybersecurity & Privacy track mentors are industry experts and researchers who will provide guidance
                 and support throughout the hackathon.
               </p>
@@ -424,7 +424,7 @@ export default function AIMLTrackPage() {
                 <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
                   Schedule Mentor Session
                 </Button>
-              </div>*/}
+              </div>
             </div>
           )}
 
