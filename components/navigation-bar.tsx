@@ -164,6 +164,7 @@ export function NavigationBar({ sections, scrollToSection }: NavigationBarProps)
                 Register <Rocket className="ml-2 h-3 w-3" />
               </Button>
             </div>
+            <br></br>
           </div>
         </div>
       </div>
