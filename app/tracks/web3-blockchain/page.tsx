@@ -360,16 +360,7 @@ export default function Web3BlockchainTrackPage() {
                 ))}
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
-                <h3 className="text-xl font-bold mb-4">Have Your Own Idea?</h3>
-                <p className="mb-4">
-                  If you have an innovative Web3 project idea that doesn't fit the problem statements above, you can
-                  submit your own proposal.
-                </p>
-                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                  Submit Custom Proposal
-                </Button>
-              </div>
+   
             </div>
           )}
 

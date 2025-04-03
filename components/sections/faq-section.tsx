@@ -56,11 +56,7 @@ export const FAQSection = forwardRef<HTMLDivElement, FAQSectionProps>(function F
       a: "No, all coding and development must start after the hackathon officially begins. You can brainstorm ideas and create wireframes beforehand, but no pre-written code is allowed.",
       category: "Rules",
     },
-    {
-      q: "Will there be prizes for all tracks?",
-      a: "Yes, each track will have its own set of prizes. Additionally, there will be overall winners for the first, second, and third places across all tracks.",
-      category: "Prizes",
-    },
+
   ]
 
   const categories = Array.from(new Set(faqItems.map((item) => item.category)))
