@@ -27,7 +27,7 @@ export const TimelineSection = forwardRef<HTMLDivElement, TimelineSectionProps>(
     {
       title: "Submission Deadline",
       description: "Find teammates, attend skill-building workshops, and get mentorship to prepare for the main event.",
-      date: "April 11, 2025",
+      date: "April 25, 2025",
       time: "12:00 AM IST",
     },
     {
