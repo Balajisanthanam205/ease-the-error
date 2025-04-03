@@ -134,7 +134,7 @@ export function NavigationBar({ sections, scrollToSection }: NavigationBarProps)
       {/* Mobile menu with animation */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-black/95 backdrop-blur-lg px-4 py-5 border-t border-gray-800/50">
