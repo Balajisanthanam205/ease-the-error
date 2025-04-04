@@ -52,7 +52,7 @@ export function FooterSection() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <div className="flex space-x-4 text-gray-400 hover:text-white transition-colors">
              {/* <Link
                 href="https://www.linkedin.com/in/the-forum-of-data-science-engineers-b37716291/"
