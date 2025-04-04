@@ -96,6 +96,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon 2024 Winner",
       domain: "Data Analytics",
       image: "/placeholder.svg?height=96&width=96&text=Kishore+M",
+      linkedin: "#",
     },
     {
       name: "Mukundh A P",
@@ -103,6 +104,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon 2024 Winner",
       domain: "Data Analytics",
       image: "/placeholder.svg?height=96&width=96&text=Mukundh+AP",
+      linkedin: "#",
     },
     {
       name: "Cletus Rajkumar",
@@ -110,6 +112,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon Finalist",
       domain: "Machine Learning",
       image: "/placeholder.svg?height=96&width=96&text=Cletus+R",
+      linkedin: "#",
     },
     {
       name: "K. Jaiadhitya",
@@ -117,6 +120,7 @@ export default function AIMLTrackPage() {
       bio: "UmagineTN Third Prize Winner",
       domain: "Machine Learning",
       image: "/placeholder.svg?height=96&width=96&text=Jaiadhitya",
+      linkedin: "#",
     },
     {
       name: "Gowtham S",
@@ -124,6 +128,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon Finalist",
       domain: "Cyber Security",
       image: "/placeholder.svg?height=96&width=96&text=Gowtham+S",
+      linkedin: "#",
     },
     {
       name: "Mugundhan Y",
@@ -131,6 +136,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon 2024 Winner",
       domain: "Cyber Security",
       image: "/placeholder.svg?height=96&width=96&text=Mugundhan+Y",
+      linkedin: "#",
     },
     {
       name: "Devesh S",
@@ -138,6 +144,7 @@ export default function AIMLTrackPage() {
       bio: "UmagineTN Third Prize Winner",
       domain: "Blockchain & Web3",
       image: "/placeholder.svg?height=96&width=96&text=Devesh+S",
+      linkedin: "#",
     },
     {
       name: "Praveen Kumar R",
@@ -145,6 +152,7 @@ export default function AIMLTrackPage() {
       bio: "Smart India Hackathon 2024 Winner",
       domain: "Blockchain & Web3",
       image: "/placeholder.svg?height=96&width=96&text=Praveen+Kumar+R",
+      linkedin: "#",
     },
   ]
 
@@ -406,6 +414,7 @@ export default function AIMLTrackPage() {
                 key={index}
                 className="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row gap-6"
               >
+                {/* Profile Image */}
                 <div className="flex-shrink-0">
                   <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-800">
                     <Image
@@ -417,10 +426,25 @@ export default function AIMLTrackPage() {
                     />
                   </div>
                 </div>
+
+                {/* Mentor Details */}
                 <div>
                   <h3 className="text-xl font-bold mb-1">{mentor.name}</h3>
                   <p className="text-red-400 mb-2">{mentor.title}</p>
-                  <p className="text-gray-400 text-sm">{mentor.bio}</p>
+                  <p className="text-gray-400 text-sm mb-3">{mentor.bio}</p>
+
+                  {/* LinkedIn Icon */}
+                  <div className="flex items-center gap-3">
+                    <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          fillRule="evenodd"
+                          d="M20.452 20.452H16.9V14.44c0-1.433-.026-3.278-1.998-3.278-1.999 0-2.305 1.56-2.305 3.17v6.121H8.547V9.081h3.385v1.557h.048c.47-.891 1.617-1.83 3.332-1.83 3.567 0 4.23 2.345 4.23 5.398v6.246zM5.337 7.433a2.042 2.042 0 110-4.084 2.042 2.042 0 010 4.084zm1.923 13.019H3.417V9.081h3.843v11.371z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -429,6 +453,7 @@ export default function AIMLTrackPage() {
       );
     })}
 
+    {/* Help Section */}
     <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 mt-8">
       <h3 className="text-xl font-bold mb-4">Need Help?</h3>
       <p className="mb-4">
@@ -441,6 +466,7 @@ export default function AIMLTrackPage() {
     </div>
   </div>
 )}
+
 
 
 
