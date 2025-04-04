@@ -51,27 +51,37 @@ export function FooterSection() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <div className="flex space-x-4 text-gray-400 hover:text-white transition-colors">
-             {/* <Link
-                href="https://www.linkedin.com/in/the-forum-of-data-science-engineers-b37716291/"
-                className="text-gray-400 hover:text-white transition-colors"
-              >*/} 
-              <div className="text-gray-400 hover:text-white transition-colors">
-                Divya Prakash - +91 98409 65005,
-              </div> <br></br>
-              {/*</div></Link>*/}
-              {/*<Link
-                href="https://www.instagram.com/fodse_svce/"
-                className="text-gray-400 hover:text-white transition-colors"
-              >*/} 
-              <div className="text-gray-400 hover:text-white transition-colors">
-                Pavithraa Jawahar - +91 72000 97918.
-              </div>
-              {/*</Link>*/} 
-            </div>
-          </div>
+          <div className="md:col-span-1">
+  <h3 className="text-white font-bold mb-6">Contact Us</h3>
+  <ul className="space-y-4">
+    <li className="flex items-start gap-3">
+      <Phone className="h-5 w-5 text-cyan-400 mt-0.5" />
+      <span className="text-gray-400">
+        Divya Prakash <br />
+        <span className="font-medium text-white">+91 98409 65005</span>
+      </span>
+    </li>
+    <li className="flex items-start gap-3">
+      <Phone className="h-5 w-5 text-cyan-400 mt-0.5" />
+      <span className="text-gray-400">
+        Pavithraa Jawahar <br />
+        <span className="font-medium text-white">+91 72000 97918</span>
+      </span>
+    </li>
+    {/* Add LinkedIn icons if needed */}
+    <li className="flex items-center gap-3">
+      <Linkedin className="h-5 w-5 text-cyan-400" />
+      <a
+        href="https://www.linkedin.com/in/the-forum-of-data-science-engineers-b37716291/"
+        target="_blank"
+        className="text-gray-400 hover:text-white transition-colors"
+      >
+        Connect on LinkedIn
+      </a>
+    </li>
+  </ul>
+</div>
+
 
           <div>
             <h3 className="text-lg font-bold mb-4">Resources</h3>
