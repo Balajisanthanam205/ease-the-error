@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Rocket, Heart } from "lucide-react"
+import { Rocket, Heart, Phone } from "lucide-react"
 
 export function FooterSection() {
   return (
